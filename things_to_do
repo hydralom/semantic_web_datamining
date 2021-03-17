@@ -1,0 +1,16 @@
+* get data from api
+* create a json-ld for each source
+* convert json-ld to rdf
+
+* create an ontology (protege)
+
+* create sparql queries
+==> they must be logical and "kinda hard"
+
+* the app
+==> a console app asking things to the db
+or
+==> web app
+
+
+exemple : https://bikestations.netlify.app/
