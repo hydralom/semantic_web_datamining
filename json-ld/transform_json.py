@@ -28,20 +28,25 @@ regions = ["REGION+DE+PARIS-NORD",
 url = "https://ressources.data.sncf.com/api/records/1.0/search/?dataset=referentiel-gares-voyageurs&q=&rows=200&refine.gare_regionsncf_libelle="
 
 context = {
-    "@vocab": "http://confinos.fr/",
+    "@vocab": "http://confinos.fr/train_stations#",
+    "@base": "http://confinos.fr/train_stations",
+    # fields qu'on garde
     "code": "@id",
-    # "uic_code": "@id",
-    "@type": "TrainStation",
-    "longitude_entreeprincipale_wgs84": "string",
-    "latitude_entreeprincipale_wgs84": "string",
-    # "code": "string",
-    "uic_code": "string",
-    "commune_libellemin": "string",
-    "commune_code": "string",
-    "departement_libellemin": "string",
-    "departement_numero": "string",
-    "adresse_cp": "string",
-    "gare_regionsncf_libelle": "string",
+    "longitude_entreeprincipale_wgs84": {
+        "@id": "longitude",
+        "@type": "https://www.w3.org/2001/XMLSchema#float",
+    },
+    "latitude_entreeprincipale_wgs84": {
+        "@id": "latitude",
+        "@type": "https://www.w3.org/2001/XMLSchema#float",
+    },
+    "uic_code":  "code_uic",
+    "commune_libellemin": "commune_name",
+    "commune_code": "commune_code",
+    "departement_libellemin": "departement_name",
+    "departement_numero": "departement_numero",
+    "adresse_cp": "code_postal",
+    "gare_regionsncf_libelle": "region_sncf",
     # fields en trop
     "wgs_84": "null",
     "gare": "null",
