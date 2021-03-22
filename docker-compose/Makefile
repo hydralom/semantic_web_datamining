@@ -25,6 +25,7 @@ install:
 up:
 	@docker-compose up -d; \
 	echo "\nFuseki is running"; \
+	echo "\nFuseki is running"; \
 	echo "\n";
 
 
