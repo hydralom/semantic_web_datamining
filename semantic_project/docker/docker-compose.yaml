@@ -1,0 +1,23 @@
+version: '3.5'
+
+networks:
+    semantics:
+        name: semantics
+        driver: bridge
+
+services:
+    jena_fuseki:
+        container_name: jena_fuseki
+        image: stain/jena-fuseki
+        ports:
+            - '3030:3030'
+        volumes:
+            - './fuseki:/fuseki'
+        environment:
+            - ADMIN_PASSWORD=password
+        networks:
+            - semantics
+
+volumes:
+    jena_fuseki:
+        driver: local
