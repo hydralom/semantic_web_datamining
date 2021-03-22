@@ -25,7 +25,7 @@ services:
             - 4100:80
         volumes:
             - ./nginx/conf/portal.conf:/etc/nginx/sites-enabled/default.conf
-            - ../portal/symfony:/var/www/html
+            - ../symfony/semantic_project:/var/www/html
         environment:
             - APP_ENV=dev
             - ENABLE_XDEBUG=1
@@ -33,6 +33,6 @@ services:
         networks:
             - semantics
 
-volumes:
-    jena_fuseki:
-        driver: local
+#volumes:
+#    jena_fuseki:
+#        driver: local

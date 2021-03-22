@@ -18,14 +18,7 @@ RUN pecl install -o -f redis \
   &&  rm -rf /tmp/pear \
   &&  docker-php-ext-enable redis
 
-#RUN echo "max_execution_time=300" >> $PHP_INI_DIR/conf.d/90-custom.ini
-#RUN echo "opcache.memory_consumption=256" >> $PHP_INI_DIR/conf.d/90-custom.ini
-#RUN echo "opcache.max_accelerated_files=20000" >> $PHP_INI_DIR/conf.d/90-custom.ini
-#RUN echo "opcache.validate_timestamps=0" >> $PHP_INI_DIR/conf.d/90-custom.ini
-#RUN echo "realpath_cache_size=4096K" >> $PHP_INI_DIR/conf.d/90-custom.ini
-#RUN echo "realpath_cache_ttl=600" >> $PHP_INI_DIR/conf.d/90-custom.ini
-
-COPY symfony/ /var/www/html
+COPY semantic_project/ /var/www/html
 WORKDIR /var/www/html
 
 ENV SKIP_COMPOSER=true
