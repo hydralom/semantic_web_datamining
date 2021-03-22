@@ -1,8 +1,7 @@
-version: '3.5'
+version: '3.4'
 
 networks:
     semantics:
-        name: semantics
         driver: bridge
 
 services:
@@ -22,7 +21,7 @@ services:
         container_name: semantic_project
         build: ../symfony
         ports:
-            - 4100:80
+            - 4010:80
         volumes:
             - ./nginx/conf/portal.conf:/etc/nginx/sites-enabled/default.conf
             - ../symfony/semantic_project:/var/www/html
