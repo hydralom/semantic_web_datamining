@@ -25,7 +25,7 @@ install:
 up:
 	@docker-compose up -d; \
 	echo "\nFuseki is running"; \
-	echo "\nFuseki is running"; \
+	echo "\nWebsite is running at http://localhost:4010/"; \
 	echo "\n";
 
 
