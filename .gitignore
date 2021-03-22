@@ -1,5 +1,5 @@
 # docker related
-semantic_project/docker/fuseki/*
+docker-compose/fuseki/*
 
 
 # Byte-compiled / optimized / DLL files

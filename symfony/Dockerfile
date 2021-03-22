@@ -1,0 +1,40 @@
+FROM richarvey/nginx-php-fpm:1.5.7
+
+# set local time to paris
+RUN apk add --no-cache tzdata
+ENV TZ Europe/Paris
+RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
+
+RUN apk add --no-cache --virtual .build-deps \
+    g++ make autoconf yaml-dev
+
+RUN pecl channel-update pecl.php.net
+
+RUN pecl install apcu \
+    && docker-php-ext-enable apcu
+
+# Install PHP Redis extension
+RUN pecl install -o -f redis \
+  &&  rm -rf /tmp/pear \
+  &&  docker-php-ext-enable redis
+
+#RUN echo "max_execution_time=300" >> $PHP_INI_DIR/conf.d/90-custom.ini
+#RUN echo "opcache.memory_consumption=256" >> $PHP_INI_DIR/conf.d/90-custom.ini
+#RUN echo "opcache.max_accelerated_files=20000" >> $PHP_INI_DIR/conf.d/90-custom.ini
+#RUN echo "opcache.validate_timestamps=0" >> $PHP_INI_DIR/conf.d/90-custom.ini
+#RUN echo "realpath_cache_size=4096K" >> $PHP_INI_DIR/conf.d/90-custom.ini
+#RUN echo "realpath_cache_ttl=600" >> $PHP_INI_DIR/conf.d/90-custom.ini
+
+COPY symfony/ /var/www/html
+WORKDIR /var/www/html
+
+ENV SKIP_COMPOSER=true
+ENV SKIP_CHOWN=true
+
+RUN cd /var/www/html \
+  && composer install \
+  && composer clearcache -n \
+  && composer dump-autoload --optimize --classmap-authoritative \
+  && mkdir -p /var/www/html/var/cache \
+  && mkdir -p /var/www/html/var/log \
+  && chown -Rf nginx: /var/www/html/var
