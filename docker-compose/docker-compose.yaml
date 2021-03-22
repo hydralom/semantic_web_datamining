@@ -20,7 +20,7 @@ services:
 
     semantic_project:
         container_name: semantic_project
-        build: ../semantic_project
+        build: ../symfony
         ports:
             - 4100:80
         volumes:

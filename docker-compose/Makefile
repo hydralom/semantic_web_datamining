@@ -17,6 +17,11 @@ help:
 build:
 	@docker-compose build
 
+install:
+	docker-compose exec semantic_project composer install;
+	#docker-compose exec semantic_project php bin/console d:m:m --no-interaction; \
+	#docker-compose exec semantic_project php bin/console d:f:l --no-interaction
+
 up:
 	@docker-compose up -d; \
 	echo "\nFuseki is running"; \
@@ -35,7 +40,7 @@ go-fuseki:
 	@docker exec -it jena_fuseki bash
 
 go-project:
-	@docker exec -it jena_fuseki bash
+	@docker exec -it semantic_project bash
 
 logs:
 	@docker-compose logs

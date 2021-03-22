@@ -10,6 +10,14 @@ cd docker-compose
 make build
 ```
 
+## Install project
+
+To install project (install composer, migrations, ...) :
+
+```bash
+make install
+```
+
 ## How to run project
 
 start project :

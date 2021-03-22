@@ -1,4 +1,4 @@
-FROM richarvey/nginx-php-fpm:1.5.7
+FROM richarvey/nginx-php-fpm:1.10.4
 
 # set local time to paris
 RUN apk add --no-cache tzdata
@@ -31,3 +31,11 @@ RUN cd /var/www/html \
   && mkdir -p /var/www/html/var/cache \
   && mkdir -p /var/www/html/var/log \
   && chown -Rf nginx: /var/www/html/var
+
+#RUN cd /var/www/html
+#RUN composer install
+#RUN composer clearcache -n
+#RUN composer dump-autoload --optimize --classmap-authoritative
+#RUN mkdir -p /var/www/html/var/cache
+#RUN mkdir -p /var/www/html/var/log
+#RUN chown -Rf nginx: /var/www/html/var
