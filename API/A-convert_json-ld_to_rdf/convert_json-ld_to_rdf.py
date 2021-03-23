@@ -1,6 +1,6 @@
 from rdflib import Graph
 
-tableau = [ "wifi"]  # "accident_travail" "trainstation", "handicap",
+tableau = ["handicap", "wifi", "trainstation"] # "accident_travail",
 
 for name in tableau:
     print("start : %s.json" % name)

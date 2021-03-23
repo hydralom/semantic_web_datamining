@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\Manager\VilleManager;
 use App\Manager\TrainStationManager;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -20,13 +21,23 @@ class TrainStation extends AbstractController
     protected $trainStationManager;
 
     /**
+     * @var VilleManager $villeManager
+     */
+    protected $villeManager;
+
+    /**
      * TrainStation constructor.
      *
      * @param TrainStationManager $trainStationManager
+     * @param VilleManager $villeManager
      */
-    public function __construct(TrainStationManager $trainStationManager)
+    public function __construct(
+        TrainStationManager $trainStationManager,
+        VilleManager $villeManager
+    )
     {
         $this->trainStationManager = $trainStationManager;
+        $this->villeManager = $villeManager;
     }
 
     /**
@@ -38,7 +49,7 @@ class TrainStation extends AbstractController
      */
     public function TrainStationsCity(string $city): Response
     {
-        $villes = $this->trainStationManager->getVilles();
+        $villes = $this->villeManager->getVilles();
         $trainstations = $city == "Z" ?
             $this->trainStationManager->getTrainStations() :
             $this->trainStationManager->getTrainStationsByCity($city);

@@ -43,12 +43,4 @@ class TrainStationManager
     {
         return $this->trainStationRepository->getTrainStations();
     }
-
-    /**
-     * @return mixed
-     */
-    public function getVilles()
-    {
-        return $this->trainStationRepository->getVilles();
-    }
 }
