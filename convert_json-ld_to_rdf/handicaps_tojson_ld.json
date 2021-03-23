@@ -2,12 +2,16 @@
     "@context": {
         "@vocab": "http://confinos.fr/train_stations#",
         "@base": "http://confinos.fr/train_stations",
-        "uic": "code_uic",
+
+        "uic": "@id",
         "fauteuil": {
             "@id": "wheelchairs",
             "@type": "https://www.w3.org/2001/XMLSchema#integer"
         },
-        "assistance_simple":"simple_support",
+        "assistance_simple":{
+            "@id": "simple_support",
+            "@type": "https://www.w3.org/2001/XMLSchema#integer"
+        },
         "rampe":{
             "@id": "ramps",
             "@type": "https://www.w3.org/2001/XMLSchema#integer"
@@ -20,7 +24,7 @@
             "@id": "supported_disabled_nb",
             "@type": "https://www.w3.org/2001/XMLSchema#integer"
         },
-        "datemensuel": "2020-11",
+        "datemensuel": "record_month",
         "record_timestamp":"null",
         "gare" : "null"
 
