@@ -3,10 +3,23 @@
         "@vocab": "http://confinos.fr/train_stations#",
         "@base": "http://confinos.fr/train_stations",
         "uic": "code_uic",
-        "fauteuil":"fauteuils",
-        "assistance_simple":"assistances_simples",
-        "rampes":"rampes",
-        "rampe_fauteuil":"rampes&fauteuils",
+        "fauteuil": {
+            "@id": "wheelchairs",
+            "@type": "https://www.w3.org/2001/XMLSchema#integer"
+        },
+        "assistance_simple":"simple_support",
+        "rampe":{
+            "@id": "ramps",
+            "@type": "https://www.w3.org/2001/XMLSchema#integer"
+        },
+        "rampe_fauteuil":{
+            "@id": "wheelchairs_on_ramps",
+            "@type": "https://www.w3.org/2001/XMLSchema#integer"          
+        },
+        "total": {
+            "@id": "supported_disabled_nb",
+            "@type": "https://www.w3.org/2001/XMLSchema#integer"
+        },
         "datemensuel": "2020-11",
         "record_timestamp":"null",
         "gare" : "null"
