@@ -1,0 +1,436 @@
+{
+    "nhits":2867,
+    "parameters":{
+    "dataset":"referentiel-gares-voyageurs",
+    "timezone":"UTC",
+    "rows":10,
+    "start":0,
+    "sort":[
+    "gare_alias_libelle_noncontraint"
+    ],
+    "format":"json"
+    },
+    "records":[
+    {
+    "datasetid":"referentiel-gares-voyageurs",
+    "recordid":"bf843f82648214eceba400fb4829ca656b0c23a1",
+    "fields":{
+    "code":"02266-1",
+    "departement_numero":"60",
+    "departement_libellemin":"Oise",
+    "gare":"{\"DRG_ON\": true, \"Etrangere_ON\": false, \"NbPltf\": 1, \"Alias_Libelle_NonContraint\": \"Abancourt\", \"Alias_Libelle_Fronton\": \"Abancourt\", \"AgenceGC_Libelle\": \"DTG Hauts de France - Normandie\", \"RegionSNCF_Libelle\": \"REGION PICARDIE\", \"UG_Libelle\": \"UG Picardie\", \"UT_Libelle\": \"ABANCOURT P GARE\"}",
+    "gare_ut_libelle":"ABANCOURT P GARE",
+    "tvs":"ABT",
+    "tvss":"[{\"TVS_Code\": \"ABT\"}]",
+    "uic_code":"0087313759",
+    "gare_alias_libelle_noncontraint":"Abancourt",
+    "longitude_entreeprincipale_wgs84":"1.7743058",
+    "wgs_84":[
+    49.6852237,
+    1.7743058
+    ],
+    "segmentdrg_libelle":"c",
+    "gare_etrangere_on":"False",
+    "niveauservice_libelle":1,
+    "commune_code":"001",
+    "gare_drg_on":"True",
+    "gare_agencegc_libelle":"DTG Hauts de France - Normandie",
+    "gare_regionsncf_libelle":"REGION PICARDIE",
+    "commune_libellemin":"Abancourt",
+    "gare_alias_libelle_fronton":"Abancourt",
+    "alias_libelle_noncontraint":"Abancourt",
+    "adresse_cp":"60220",
+    "gare_ug_libelle":"UG Picardie",
+    "latitude_entreeprincipale_wgs84":"49.6852237",
+    "rg_libelle":"GARES C PICARDIE",
+    "gare_nbpltf":1
+    },
+    "geometry":{
+    "type":"Point",
+    "coordinates":[
+    1.7743058,
+    49.6852237
+    ]
+    },
+    "record_timestamp":"2021-03-16T23:00:20.305000+00:00"
+    },
+    {
+    "datasetid":"referentiel-gares-voyageurs",
+    "recordid":"81f8621396959619a0b621db43ce124b48482c9a",
+    "fields":{
+    "code":"01604-1",
+    "departement_numero":"44",
+    "departement_libellemin":"Loire-Atlantique",
+    "gare":"{\"DRG_ON\": true, \"Etrangere_ON\": false, \"NbPltf\": 1, \"Alias_Libelle_NonContraint\": \"Abbaretz\", \"Alias_Libelle_Fronton\": \"Abbaretz\", \"AgenceGC_Libelle\": \"DTG Centre Ouest\", \"RegionSNCF_Libelle\": \"REGION PAYS DE LA LOIRE\", \"UG_Libelle\": \"UG Pays de la Loire\", \"UT_Libelle\": \"ABBARETZ GARE\"}",
+    "gare_ut_libelle":"ABBARETZ GARE",
+    "tvs":"AAR",
+    "tvss":"[{\"TVS_Code\": \"AAR\"}]",
+    "uic_code":"0087481614",
+    "gare_alias_libelle_noncontraint":"Abbaretz",
+    "longitude_entreeprincipale_wgs84":"-1.5244159",
+    "wgs_84":[
+    47.5546432,
+    -1.5244159
+    ],
+    "segmentdrg_libelle":"c",
+    "gare_etrangere_on":"False",
+    "niveauservice_libelle":1,
+    "commune_code":"001",
+    "gare_drg_on":"True",
+    "gare_agencegc_libelle":"DTG Centre Ouest",
+    "gare_regionsncf_libelle":"REGION PAYS DE LA LOIRE",
+    "commune_libellemin":"Abbaretz",
+    "gare_alias_libelle_fronton":"Abbaretz",
+    "alias_libelle_noncontraint":"Abbaretz",
+    "adresse_cp":"44170",
+    "gare_ug_libelle":"UG Pays de la Loire",
+    "latitude_entreeprincipale_wgs84":"47.5546432",
+    "rg_libelle":"GARES C PAYS DE LA LOIRE",
+    "gare_nbpltf":1
+    },
+    "geometry":{
+    "type":"Point",
+    "coordinates":[
+    -1.5244159,
+    47.5546432
+    ]
+    },
+    "record_timestamp":"2021-03-16T23:00:20.305000+00:00"
+    },
+    {
+    "datasetid":"referentiel-gares-voyageurs",
+    "recordid":"5977371ac7fce14b397c42df229e1ef86766109a",
+    "fields":{
+    "code":"02219-1",
+    "departement_numero":"80",
+    "departement_libellemin":"Somme",
+    "gare":"{\"DRG_ON\": true, \"Etrangere_ON\": false, \"NbPltf\": 1, \"Alias_Libelle_NonContraint\": \"Abbeville\", \"Alias_Libelle_Fronton\": \"Abbeville\", \"AgenceGC_Libelle\": \"DTG Hauts de France - Normandie\", \"RegionSNCF_Libelle\": \"REGION PICARDIE\", \"UG_Libelle\": \"UG Picardie\", \"UT_Libelle\": \"ABBEVILLE GARE\"}",
+    "gare_ut_libelle":"ABBEVILLE GARE",
+    "tvs":"ABB",
+    "tvss":"[{\"TVS_Code\": \"ABB\"}]",
+    "uic_code":"0087317362",
+    "gare_alias_libelle_noncontraint":"Abbeville",
+    "longitude_entreeprincipale_wgs84":"1.82449",
+    "wgs_84":[
+    50.10221,
+    1.82449
+    ],
+    "segmentdrg_libelle":"b",
+    "gare_etrangere_on":"False",
+    "niveauservice_libelle":2,
+    "commune_code":"001",
+    "gare_drg_on":"True",
+    "gare_agencegc_libelle":"DTG Hauts de France - Normandie",
+    "gare_regionsncf_libelle":"REGION PICARDIE",
+    "commune_libellemin":"Abbeville",
+    "gare_alias_libelle_fronton":"Abbeville",
+    "alias_libelle_noncontraint":"Abbeville",
+    "adresse_cp":"80100",
+    "gare_ug_libelle":"UG Picardie",
+    "latitude_entreeprincipale_wgs84":"50.10221",
+    "rg_libelle":"GARES B PICARDIE",
+    "gare_nbpltf":1
+    },
+    "geometry":{
+    "type":"Point",
+    "coordinates":[
+    1.82449,
+    50.10221
+    ]
+    },
+    "record_timestamp":"2021-03-16T23:00:20.305000+00:00"
+    },
+    {
+    "datasetid":"referentiel-gares-voyageurs",
+    "recordid":"9521b2ca13e3beeda8317213f14dc9b2bdca2509",
+    "fields":{
+    "code":"01460-1",
+    "departement_numero":"94",
+    "departement_libellemin":"Val-de-Marne",
+    "gare":"{\"DRG_ON\": true, \"Etrangere_ON\": false, \"NbPltf\": 1, \"Alias_Libelle_NonContraint\": \"Ablon-sur-Seine\", \"Alias_Libelle_Fronton\": \"Ablon\", \"AgenceGC_Libelle\": \"Direction Générale des Gares Île-de-France\", \"RegionSNCF_Libelle\": \"REGION DE PARIS RIVE GAUCHE\", \"UG_Libelle\": null, \"UT_Libelle\": \"ABLON GARE\"}",
+    "gare_ut_libelle":"ABLON GARE",
+    "tvs":"ABL",
+    "tvss":"[{\"TVS_Code\": \"ABL\"}]",
+    "uic_code":"0087545269",
+    "gare_alias_libelle_noncontraint":"Ablon-sur-Seine",
+    "longitude_entreeprincipale_wgs84":"2.419151",
+    "wgs_84":[
+    48.725468,
+    2.419151
+    ],
+    "segmentdrg_libelle":"b",
+    "gare_etrangere_on":"False",
+    "commune_code":"001",
+    "gare_drg_on":"True",
+    "gare_agencegc_libelle":"Direction Générale des Gares Île-de-France",
+    "gare_regionsncf_libelle":"REGION DE PARIS RIVE GAUCHE",
+    "commune_libellemin":"Ablon-sur-Seine",
+    "gare_alias_libelle_fronton":"Ablon",
+    "alias_libelle_noncontraint":"Ablon-sur-Seine",
+    "adresse_cp":"94480",
+    "latitude_entreeprincipale_wgs84":"48.725468",
+    "rg_libelle":"GARES B IDF LIGNE C",
+    "gare_nbpltf":1
+    },
+    "geometry":{
+    "type":"Point",
+    "coordinates":[
+    2.419151,
+    48.725468
+    ]
+    },
+    "record_timestamp":"2021-03-16T23:00:20.305000+00:00"
+    },
+    {
+    "datasetid":"referentiel-gares-voyageurs",
+    "recordid":"b0f574f79b939aa790999a750aacd895e915d19d",
+    "fields":{
+    "code":"02020-1",
+    "departement_numero":"78",
+    "departement_libellemin":"Yvelines",
+    "gare":"{\"DRG_ON\": true, \"Etrangere_ON\": false, \"NbPltf\": 1, \"Alias_Libelle_NonContraint\": \"Achères Grand Cormier\", \"Alias_Libelle_Fronton\": \"Achères Grand Cormier\", \"AgenceGC_Libelle\": \"Direction Générale des Gares Île-de-France\", \"RegionSNCF_Libelle\": \"REGION DE PARIS SAINT-LAZARE\", \"UG_Libelle\": null, \"UT_Libelle\": \"ACHERES GRAND CORMIER GARE\"}",
+    "gare_ut_libelle":"ACHERES GRAND CORMIER GARE",
+    "tvs":"GCR",
+    "tvss":"[{\"TVS_Code\": \"GCR\"}]",
+    "uic_code":"0087386052",
+    "gare_alias_libelle_noncontraint":"Achères Grand Cormier",
+    "longitude_entreeprincipale_wgs84":"2.0919031",
+    "wgs_84":[
+    48.9551835,
+    2.0919031
+    ],
+    "segmentdrg_libelle":"b",
+    "gare_etrangere_on":"False",
+    "commune_code":"551",
+    "gare_drg_on":"True",
+    "gare_agencegc_libelle":"Direction Générale des Gares Île-de-France",
+    "gare_regionsncf_libelle":"REGION DE PARIS SAINT-LAZARE",
+    "commune_libellemin":"Saint-Germain-en-Laye",
+    "gare_alias_libelle_fronton":"Achères Grand Cormier",
+    "alias_libelle_noncontraint":"Achères Grand Cormier",
+    "adresse_cp":"78100",
+    "latitude_entreeprincipale_wgs84":"48.9551835",
+    "rg_libelle":"GARES B IDF LIGNE A",
+    "gare_nbpltf":1
+    },
+    "geometry":{
+    "type":"Point",
+    "coordinates":[
+    2.0919031,
+    48.9551835
+    ]
+    },
+    "record_timestamp":"2021-03-16T23:00:20.305000+00:00"
+    },
+    {
+    "datasetid":"referentiel-gares-voyageurs",
+    "recordid":"c2051480af54691801639c73009596c6a89d8fe7",
+    "fields":{
+    "code":"02062-1",
+    "departement_numero":"78",
+    "departement_libellemin":"Yvelines",
+    "gare":"{\"DRG_ON\": true, \"Etrangere_ON\": false, \"NbPltf\": 1, \"Alias_Libelle_NonContraint\": \"Achères Ville\", \"Alias_Libelle_Fronton\": \"Achères Ville\", \"AgenceGC_Libelle\": \"Direction Générale des Gares Île-de-France\", \"RegionSNCF_Libelle\": \"REGION DE PARIS SAINT-LAZARE\", \"UG_Libelle\": null, \"UT_Libelle\": \"ACHERES VILLE GARE\"}",
+    "gare_ut_libelle":"ACHERES VILLE GARE",
+    "tvs":"ACW",
+    "tvss":"[{\"TVS_Code\": \"ACW\"}]",
+    "uic_code":"0087381657",
+    "gare_alias_libelle_noncontraint":"Achères Ville",
+    "longitude_entreeprincipale_wgs84":"2.07739",
+    "wgs_84":[
+    48.97011,
+    2.07739
+    ],
+    "segmentdrg_libelle":"b",
+    "gare_etrangere_on":"False",
+    "commune_code":"005",
+    "gare_drg_on":"True",
+    "gare_agencegc_libelle":"Direction Générale des Gares Île-de-France",
+    "gare_regionsncf_libelle":"REGION DE PARIS SAINT-LAZARE",
+    "commune_libellemin":"Achères",
+    "gare_alias_libelle_fronton":"Achères Ville",
+    "alias_libelle_noncontraint":"Achères Ville",
+    "adresse_cp":"78260",
+    "latitude_entreeprincipale_wgs84":"48.97011",
+    "rg_libelle":"GARES B IDF LIGNE A",
+    "gare_nbpltf":1
+    },
+    "geometry":{
+    "type":"Point",
+    "coordinates":[
+    2.07739,
+    48.97011
+    ]
+    },
+    "record_timestamp":"2021-03-16T23:00:20.305000+00:00"
+    },
+    {
+    "datasetid":"referentiel-gares-voyageurs",
+    "recordid":"973bd01ee943e9c7dc2f14c75644b3d7614ef194",
+    "fields":{
+    "code":"02187-1",
+    "departement_numero":"62",
+    "departement_libellemin":"Pas-de-Calais",
+    "gare":"{\"DRG_ON\": true, \"Etrangere_ON\": false, \"NbPltf\": 1, \"Alias_Libelle_NonContraint\": \"Achiet-le-Grand\", \"Alias_Libelle_Fronton\": \"Achiet\", \"AgenceGC_Libelle\": \"DTG Hauts de France - Normandie\", \"RegionSNCF_Libelle\": \"REGION NORD PAS DE CALAIS\", \"UG_Libelle\": \"UG Nord Pas de Calais\", \"UT_Libelle\": \"ACHIET GARE\"}",
+    "gare_ut_libelle":"ACHIET GARE",
+    "tvs":"ACT",
+    "tvss":"[{\"TVS_Code\": \"ACT\"}]",
+    "uic_code":"0087342048",
+    "gare_alias_libelle_noncontraint":"Achiet-le-Grand",
+    "longitude_entreeprincipale_wgs84":"2.780168",
+    "wgs_84":[
+    50.1317525,
+    2.780168
+    ],
+    "segmentdrg_libelle":"c",
+    "gare_etrangere_on":"False",
+    "niveauservice_libelle":1,
+    "commune_code":"005",
+    "gare_drg_on":"True",
+    "gare_agencegc_libelle":"DTG Hauts de France - Normandie",
+    "gare_regionsncf_libelle":"REGION NORD PAS DE CALAIS",
+    "commune_libellemin":"Achiet-le-Grand",
+    "gare_alias_libelle_fronton":"Achiet",
+    "alias_libelle_noncontraint":"Achiet-le-Grand",
+    "adresse_cp":"62121",
+    "gare_ug_libelle":"UG Nord Pas de Calais",
+    "latitude_entreeprincipale_wgs84":"50.1317525",
+    "rg_libelle":"GARES C NORD PAS DE CALAIS",
+    "gare_nbpltf":1
+    },
+    "geometry":{
+    "type":"Point",
+    "coordinates":[
+    2.780168,
+    50.1317525
+    ]
+    },
+    "record_timestamp":"2021-03-16T23:00:20.305000+00:00"
+    },
+    {
+    "datasetid":"referentiel-gares-voyageurs",
+    "recordid":"539ec2f742f432466f3b9c46b1aa5cc6e5f2b470",
+    "fields":{
+    "code":"02544-1",
+    "departement_numero":"93",
+    "departement_libellemin":"Seine-Saint-Denis",
+    "gare":"{\"DRG_ON\": true, \"Etrangere_ON\": false, \"NbPltf\": 1, \"Alias_Libelle_NonContraint\": \"Aéroport Charles de Gaulle 1\", \"Alias_Libelle_Fronton\": \"Aéroport Charles de Gaulle 1\", \"AgenceGC_Libelle\": \"Direction Générale des Gares Île-de-France\", \"RegionSNCF_Libelle\": \"REGION DE PARIS-NORD\", \"UG_Libelle\": null, \"UT_Libelle\": \"AEROPORT CHARLES DE GAULLE 1 RER GARE\"}",
+    "gare_ut_libelle":"AEROPORT CHARLES DE GAULLE 1 RER GARE",
+    "tvs":"RSY",
+    "tvss":"[{\"TVS_Code\": \"RSY\"}]",
+    "uic_code":"0087271460",
+    "gare_alias_libelle_noncontraint":"Aéroport Charles de Gaulle 1",
+    "longitude_entreeprincipale_wgs84":"2.56135",
+    "wgs_84":[
+    49.00956,
+    2.56135
+    ],
+    "segmentdrg_libelle":"b",
+    "gare_etrangere_on":"False",
+    "commune_code":"073",
+    "gare_drg_on":"True",
+    "gare_agencegc_libelle":"Direction Générale des Gares Île-de-France",
+    "gare_regionsncf_libelle":"REGION DE PARIS-NORD",
+    "commune_libellemin":"Tremblay-en-France",
+    "gare_alias_libelle_fronton":"Aéroport Charles de Gaulle 1",
+    "alias_libelle_noncontraint":"Aéroport Charles de Gaulle 1",
+    "adresse_cp":"93290",
+    "latitude_entreeprincipale_wgs84":"49.00956",
+    "rg_libelle":"GARES B IDF LIGNE B",
+    "gare_nbpltf":1
+    },
+    "geometry":{
+    "type":"Point",
+    "coordinates":[
+    2.56135,
+    49.00956
+    ]
+    },
+    "record_timestamp":"2021-03-16T23:00:20.305000+00:00"
+    },
+    {
+    "datasetid":"referentiel-gares-voyageurs",
+    "recordid":"fb3cf694af90949f7aed7b4f27ae5aa25076ff09",
+    "fields":{
+    "code":"02541-1",
+    "departement_numero":"95",
+    "departement_libellemin":"Val-d'Oise",
+    "gare":"{\"DRG_ON\": true, \"Etrangere_ON\": false, \"NbPltf\": 2, \"Alias_Libelle_NonContraint\": \"Aéroport Charles de Gaulle 2 TGV\", \"Alias_Libelle_Fronton\": \"Aéroport Charles de Gaulle 2 TGV\", \"AgenceGC_Libelle\": \"DTG Parisiennes Nord\", \"RegionSNCF_Libelle\": \"REGION DE PARIS-NORD\", \"UG_Libelle\": \"UG Paris Gare du Nord et CDG2\", \"UT_Libelle\": \"AEROPORT CHARLES DE GAULLE 2 TGV P GARE\"}",
+    "gare_ut_libelle":"AEROPORT CHARLES DE GAULLE 2 TGV P GARE",
+    "tvs":"RYT",
+    "tvss":"[{\"TVS_Code\": \"RYT\"}]",
+    "uic_code":"0087271494",
+    "gare_alias_libelle_noncontraint":"Aéroport Charles de Gaulle 2 TGV",
+    "longitude_entreeprincipale_wgs84":"2.570892",
+    "wgs_84":[
+    49.003652,
+    2.570892
+    ],
+    "segmentdrg_libelle":"a",
+    "gare_etrangere_on":"False",
+    "niveauservice_libelle":3,
+    "commune_code":"527",
+    "gare_drg_on":"True",
+    "gare_agencegc_libelle":"DTG Parisiennes Nord",
+    "gare_regionsncf_libelle":"REGION DE PARIS-NORD",
+    "commune_libellemin":"Roissy-en-France",
+    "gare_alias_libelle_fronton":"Aéroport Charles de Gaulle 2 TGV",
+    "alias_libelle_noncontraint":"Aéroport Charles de Gaulle 2 TGV",
+    "adresse_cp":"95700",
+    "gare_ug_libelle":"UG Paris Gare du Nord et CDG2",
+    "latitude_entreeprincipale_wgs84":"49.003652",
+    "rg_libelle":"GARE AEROPORT CDG 2 TGV",
+    "gare_nbpltf":2
+    },
+    "geometry":{
+    "type":"Point",
+    "coordinates":[
+    2.570892,
+    49.003652
+    ]
+    },
+    "record_timestamp":"2021-03-16T23:00:20.305000+00:00"
+    },
+    {
+    "datasetid":"referentiel-gares-voyageurs",
+    "recordid":"178da63dc7d991362a727d7756b4f530e9362241",
+    "fields":{
+    "code":"02541-2",
+    "departement_numero":"95",
+    "departement_libellemin":"Val-d'Oise",
+    "gare":"{\"DRG_ON\": true, \"Etrangere_ON\": false, \"NbPltf\": 2, \"Alias_Libelle_NonContraint\": \"Aéroport Charles de Gaulle 2 TGV\", \"Alias_Libelle_Fronton\": \"Aéroport Charles de Gaulle 2 TGV\", \"AgenceGC_Libelle\": \"DTG Parisiennes Nord\", \"RegionSNCF_Libelle\": \"REGION DE PARIS-NORD\", \"UG_Libelle\": \"UG Paris Gare du Nord et CDG2\", \"UT_Libelle\": \"AEROPORT CHARLES DE GAULLE 2 TGV P GARE\"}",
+    "gare_ut_libelle":"AEROPORT CHARLES DE GAULLE 2 TGV P GARE",
+    "tvs":"RYT_TRANS",
+    "tvss":"[{\"TVS_Code\": \"RYT_TRANS\"}]",
+    "uic_code":"0087001479",
+    "gare_alias_libelle_noncontraint":"Aéroport Charles de Gaulle 2 TGV",
+    "longitude_entreeprincipale_wgs84":"2.570892",
+    "wgs_84":[
+    49.003652,
+    2.570892
+    ],
+    "segmentdrg_libelle":"b",
+    "gare_etrangere_on":"False",
+    "commune_code":"527",
+    "gare_drg_on":"True",
+    "gare_agencegc_libelle":"DTG Parisiennes Nord",
+    "gare_regionsncf_libelle":"REGION DE PARIS-NORD",
+    "commune_libellemin":"Roissy-en-France",
+    "gare_alias_libelle_fronton":"Aéroport Charles de Gaulle 2 TGV",
+    "alias_libelle_noncontraint":"Aéroport Charles de Gaulle 2 TGV (RER)",
+    "adresse_cp":"95700",
+    "gare_ug_libelle":"UG Paris Gare du Nord et CDG2",
+    "latitude_entreeprincipale_wgs84":"49.003652",
+    "rg_libelle":"GARE AEROPORT CDG 2 TGV",
+    "gare_nbpltf":2
+    },
+    "geometry":{
+    "type":"Point",
+    "coordinates":[
+    2.570892,
+    49.003652
+    ]
+    },
+    "record_timestamp":"2021-03-16T23:00:20.305000+00:00"
+    }
+    ]
+    }
