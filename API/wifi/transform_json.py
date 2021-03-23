@@ -7,17 +7,12 @@ import requests
 """
 API :
 https://ressources.data.sncf.com/api/records/1.0/search/
-    ?dataset=referentiel-gares-voyageurs
+    ?dataset=gares-equipees-du-wifi
     &q=
-    &rows=200
-    &sort=gare_alias_libelle_noncontraint
-    &refine.gare_regionsncf_libelle=REGION+DE+PARIS-NORD
+    &sort=nom_de_la_gare
+    &refine.gare_regionsncf_libelle=
 
-NB results : 401
-"REGION DE PARIS-NORD"  ==> 148
-"REGION DE PARIS-SUD-EST"  ==> 96
-"REGION DE PARIS SAINT-LAZARE"  ==> 91
-"REGION DE PARIS-EST"  ==> 66
+    https://ressources.data.sncf.com/api/records/1.0/search/?dataset=gares-equipees-du-wifi&q=&sort=nom_de_la_gare
 """
 
 regions = ["REGION+DE+PARIS-NORD",
@@ -25,45 +20,15 @@ regions = ["REGION+DE+PARIS-NORD",
            "REGION+DE+PARIS SAINT-LAZARE",
            "REGION+DE+PARIS-EST"]
 
-url = "https://ressources.data.sncf.com/api/records/1.0/search/?dataset=referentiel-gares-voyageurs&q=&rows=200&refine.gare_regionsncf_libelle="
+url = "https://ressources.data.sncf.com/api/records/1.0/search/?dataset=gares-equipees-du-wifi&q=&sort=nom_de_la_gare&refine.gare_regionsncf_libelle="
 
 context = {
-    "@vocab": "http://confinos.fr/train_stations#",
-    "@base": "http://confinos.fr/train_stations",
+    "@vocab": "http://confinos.fr/wifi#",
+    "@base": "http://confinos.fr/wifi",
     # fields qu'on garde
-    "code": "@id",
-    "longitude_entreeprincipale_wgs84": {
-        "@id": "longitude",
-        "@type": "https://www.w3.org/2001/XMLSchema#float",
-    },
-    "latitude_entreeprincipale_wgs84": {
-        "@id": "latitude",
-        "@type": "https://www.w3.org/2001/XMLSchema#float",
-    },
-    "uic_code":  "code_uic",
-    "commune_libellemin": "commune_name",
-    "commune_code": "commune_code",
-    "departement_libellemin": "departement_name",
-    "departement_numero": "departement_numero",
-    "adresse_cp": "code_postal",
-    "gare_regionsncf_libelle": "region_sncf",
-    "gare_ut_libelle": "nom_gare",
-    "alias_libelle_noncontraint": "nom_gare_pretty",
-    # fields en trop
-    "wgs_84": "null",
-    "gare": "null",
-    "tvs": "null",
-    "tvss": "null",
-    "gare_alias_libelle_noncontraint": "null",
-    "segmentdrg_libelle": "null",
-    "gare_etrangere_on": "null",
-    "niveauservice_libelle": "null",
-    "gare_drg_on": "null",
-    "gare_agencegc_libelle": "null",
-    "gare_alias_libelle_fronton": "null",
-    "gare_ug_libelle": "null",
-    "rg_libelle": "null",
-    "gare_nbpltf": "null",
+    "uic": "@id",
+    "nom_de_la_gare": "nom_gare",
+    "service_wifi": "wifi_actif"
 }
 
 
@@ -118,7 +83,7 @@ def createJsonLDDict(tS):
 
 
 def exportDictToJsonFile(dictToExport):
-    with open('./result.json', 'w') as fp:
+    with open('../A-convert_json-ld_to_rdf/wifi.json', 'w') as fp:
         json.dump(dictToExport, fp)
 
 

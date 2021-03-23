@@ -1,0 +1,43 @@
+@prefix : <http://confinos.fr/wifi#> .
+
+<http://confinos.fr/313759> :nom_gare "Abancourt" ;
+    :wifi_actif "Non" .
+
+<http://confinos.fr/316745> :nom_gare "Acheux-Franleu" ;
+    :wifi_actif "Non" .
+
+<http://confinos.fr/317362> :nom_gare "Abbeville" ;
+    :wifi_actif "Non" .
+
+<http://confinos.fr/342048> :nom_gare "Achiet" ;
+    :wifi_actif "Non" .
+
+<http://confinos.fr/381657> :nom_gare "Achères-Ville" ;
+    :wifi_actif "Non" .
+
+<http://confinos.fr/386052> :nom_gare "Achères-Grand-Cormier" ;
+    :wifi_actif "Non" .
+
+<http://confinos.fr/481614> :nom_gare "Abbaretz" ;
+    :wifi_actif "Non" .
+
+<http://confinos.fr/545269> :nom_gare "Ablon" ;
+    :wifi_actif "Non" .
+
+<http://confinos.fr/757559> :nom_gare "Agay" ;
+    :wifi_actif "Non" .
+
+<http://confinos.fr/781278> :nom_gare "Agde" ;
+    :wifi_actif "Oui" .
+
+[] :data <http://confinos.fr/313759>,
+        <http://confinos.fr/316745>,
+        <http://confinos.fr/317362>,
+        <http://confinos.fr/342048>,
+        <http://confinos.fr/381657>,
+        <http://confinos.fr/386052>,
+        <http://confinos.fr/481614>,
+        <http://confinos.fr/545269>,
+        <http://confinos.fr/757559>,
+        <http://confinos.fr/781278> .
+
