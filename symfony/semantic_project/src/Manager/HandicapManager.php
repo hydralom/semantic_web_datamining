@@ -26,13 +26,22 @@ class HandicapManager
         $this->handicapRepository = $handicapRepository;
     }
 
-    public function getHandicap()
+    /**
+     * @return mixed
+     */
+    public function countHandicap()
     {
-        return $this->handicapRepository->getHandicap();
+        return $this->handicapRepository->countHandicap();
     }
 
-    public function getHandicapByCity(string $city)
+    /**
+     * @param $page
+     *
+     * @return mixed
+     */
+    public function getHandicap($page)
     {
-        return $this->handicapRepository->getHandicapByCity($city);
+        $offset = $page * 25;
+        return $this->handicapRepository->getHandicap($offset);
     }
 }

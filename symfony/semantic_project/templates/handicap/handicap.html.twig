@@ -4,37 +4,37 @@
     {% include 'navbar.html.twig' %}
 
     <div class="mt-4 container">
-        <div class="row">
-            <div class="col-3">
-                <ul>
-                    <li>
-                        <a href="{{ path('trainstations') }}">Toutes les villes</a>
+        <nav>
+            <ul class="pagination">
+                <li class="page-item {% if page == 1 %}disabled{% endif %}">
+                    <a class="page-link" href="{{ path('handicap', { page: page - 1}) }}">Previous</a>
+                </li>
+                {% for nb_page in range(1, nbPages) %}
+                    <li class="page-item">
+                        <a class="page-link" href="{{ path('handicap', { page: nb_page}) }}">{{ nb_page }}</a>
                     </li>
-                    {% for ville in villes %}
-                        <li>
-                            <a href="{{ path('trainstations', { city: ville.ville.value}) }}">{{ ville.ville.value }}</a>
-                        </li>
-                    {% endfor %}
-                </ul>
-            </div>
-
-            <div class="col">
+                {% endfor %}
+                <li class="page-item {% if page == nbPages %}disabled{% endif %}">
+                    <a class="page-link" href="{{ path('handicap', { page: page + 1}) }}">Next</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="row">
+            <div class="col-12">
                 <table class="table table-striped">
                     <thead>
                     <tr>
                         <th>Nom Gare</th>
-                        <th>Latitude</th>
-                        <th>Longitude</th>
-                        <th>Carte</th>
+                        <th>Nombre de personnes aidées</th>
+                        <th>Tous les supports</th>
                     </tr>
                     </thead>
                     <tbody>
                     {% for h in handicap %}
                         <tr>
-                            <td>{{ h.nom.value }}</td>
-                            <td>{{ h.lat.value }}</td>
-                            <td>{{ h.lon.value }}</td>
-                            <td><a>futur lien</a></td>
+                            <td>{{ h.nom_gare.value }}</td>
+                            <td>{{ h.helped_disabled_nb.value }}</td>
+                            <td>{{ h.simple_support.value }}</td>
                         </tr>
                     {% endfor %}
                     </tbody>
