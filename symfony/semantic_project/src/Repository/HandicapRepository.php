@@ -21,34 +21,19 @@ class HandicapRepository
     /**
      * @return mixed
      */
-    public function getTrainStations()
-    {
-        $query = "
-           SELECT ?nom ?lat ?lon
-           WHERE {
-               ?subject <http://confinos.fr/train_stations#nom_gare_pretty> ?nom .
-               ?subject <http://confinos.fr/train_stations#latitude> ?lat .
-               ?subject <http://confinos.fr/train_stations#longitude> ?lon .
-           }
-           ORDER BY ASC(?nom)
-        ";
-
-        $fuseki_response = $this->askFuseki($this->url . urlencode($query));
-        $content = json_decode($fuseki_response, true);
-        return $content["results"]["bindings"];
-    }
-
-
     public function getHandicap()
     {
         $query = "
-           SELECT ?nom ?lat ?lon
+           SELECT ?nom_gare ?ramp ?wheelchairs ?wheelchairs_on_ramps ?helped_disabled_nb ?simple_support
            WHERE {
-               ?subject <http://confinos.fr/train_stations#nom_gare_pretty> ?nom .
-               ?subject <http://confinos.fr/train_stations#latitude> ?lat .
-               ?subject <http://confinos.fr/train_stations#longitude> ?lon .
+             ?subject <http://confinos.fr/disabled_person_helped#nom_gare> ?nom_gare .
+             ?subject <http://confinos.fr/disabled_person_helped#ramps> ?ramps .
+             ?subject <http://confinos.fr/disabled_person_helped#wheelchairs> ?wheelchairs .
+             ?subject <http://confinos.fr/disabled_person_helped#wheelchairs_on_ramps> ?wheelchairs_on_ramps .
+             ?subject <http://confinos.fr/disabled_person_helped#helped_disabled_nb> ?helped_disabled_nb .
+             ?subject <http://confinos.fr/disabled_person_helped#simple_support> ?simple_support .
            }
-           ORDER BY ASC(?nom)
+           ORDER BY ASC(?nom_gare)
         ";
 
         $fuseki_response = $this->askFuseki($this->url . urlencode($query));
