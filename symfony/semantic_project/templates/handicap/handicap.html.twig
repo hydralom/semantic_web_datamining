@@ -1,0 +1,45 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    {% include 'navbar.html.twig' %}
+
+    <div class="mt-4 container">
+        <div class="row">
+            <div class="col-3">
+                <ul>
+                    <li>
+                        <a href="{{ path('trainstations') }}">Toutes les villes</a>
+                    </li>
+                    {% for ville in villes %}
+                        <li>
+                            <a href="{{ path('trainstations', { city: ville.ville.value}) }}">{{ ville.ville.value }}</a>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+
+            <div class="col">
+                <table class="table table-striped">
+                    <thead>
+                    <tr>
+                        <th>Nom Gare</th>
+                        <th>Latitude</th>
+                        <th>Longitude</th>
+                        <th>Carte</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% for h in handicap %}
+                        <tr>
+                            <td>{{ h.nom.value }}</td>
+                            <td>{{ h.lat.value }}</td>
+                            <td>{{ h.lon.value }}</td>
+                            <td><a>futur lien</a></td>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+{% endblock %}

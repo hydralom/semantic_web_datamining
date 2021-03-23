@@ -27,7 +27,7 @@ url = "https://ressources.data.sncf.com/api/records/1.0/search/?dataset=referent
 context = {
     "@vocab": "http://confinos.fr/disabled_person_helped#",
     "@base": "http://confinos.fr/disabled_person_helped",
-    "uic": "@id",
+    "uic_code": "@id",
     "fauteuil": {
         "@id": "wheelchairs",
         "@type": "https://www.w3.org/2001/XMLSchema#integer"
@@ -91,7 +91,7 @@ def getAllData():
                 temp = train_station["fields"]
                 data.append(temp)
 
-            time.sleep(2)
+            time.sleep(1)
 
     return data
 
