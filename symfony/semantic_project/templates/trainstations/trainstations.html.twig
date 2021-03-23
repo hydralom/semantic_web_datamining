@@ -4,16 +4,12 @@
     {% include 'navbar.html.twig' %}
 
     <div class="mt-4 container">
-        {# <div class="mb-2">
-            <select>
-            {% for ville in villes %}
-                <option><a href="{{ path('trainstations', { city: ville.ville.value}) }}">{{ ville.ville.value }}</a></option>
-            {% endfor %}
-            </select>
-        </div> #}
         <div class="row">
             <div class="col-3">
                 <ul>
+                    <li>
+                        <a href="{{ path('trainstations') }}">Toutes les villes</a>
+                    </li>
                     {% for ville in villes %}
                         <li>
                             <a href="{{ path('trainstations', { city: ville.ville.value}) }}">{{ ville.ville.value }}</a>

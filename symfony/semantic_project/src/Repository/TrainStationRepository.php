@@ -16,8 +16,12 @@ use Symfony\Contracts\HttpClient\Exception\RedirectionExceptionInterface;
  */
 class TrainStationRepository
 {
+    private $url = "http://jena_fuseki:3030/trainstation/query?query=";
 
-    public function getVilles($url)
+    /**
+     * @return mixed
+     */
+    public function getVilles()
     {
         $query_villes = "
            SELECT DISTINCT ?ville
@@ -26,18 +30,17 @@ class TrainStationRepository
            }
            ORDER BY ASC(?ville)
         ";
-        $fuseki_response = $this->askFuseki($url . urlencode($query_villes));
+        $fuseki_response = $this->askFuseki($this->url . urlencode($query_villes));
         $villes_raw = json_decode($fuseki_response, true);
         return $villes_raw["results"]["bindings"];
     }
 
     /**
-     * @param $url
      * @param $city
      *
      * @return mixed
      */
-    public function getTrainStationFromCity($url, $city)
+    public function getTrainStationsByCity($city)
     {
         $query = "
            SELECT ?nom ?lat ?lon
@@ -50,17 +53,15 @@ class TrainStationRepository
            ORDER BY ASC(?nom)
         ";
 
-        $fuseki_response = $this->askFuseki($url . urlencode($query));
+        $fuseki_response = $this->askFuseki($this->url . urlencode($query));
         $content = json_decode($fuseki_response, true);
         return $content["results"]["bindings"];
     }
 
     /**
-     * @param $url
-     *
      * @return mixed
      */
-    public function getTrainStation($url)
+    public function getTrainStations()
     {
         $query = "
            SELECT ?nom ?lat ?lon
@@ -72,7 +73,7 @@ class TrainStationRepository
            ORDER BY ASC(?nom)
         ";
 
-        $fuseki_response = $this->askFuseki($url . urlencode($query));
+        $fuseki_response = $this->askFuseki($this->url . urlencode($query));
         $content = json_decode($fuseki_response, true);
         return $content["results"]["bindings"];
     }
