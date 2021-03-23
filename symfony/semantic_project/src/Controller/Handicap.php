@@ -2,7 +2,6 @@
 
 namespace App\Controller;
 
-use App\Manager\VilleManager;
 use App\Manager\HandicapManager;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
@@ -21,42 +20,33 @@ class Handicap extends AbstractController
     protected $handicapManager;
 
     /**
-     * @var VilleManager $villeManager
-     */
-    protected $villeManager;
-
-    /**
      * Handicap constructor.
      *
      * @param HandicapManager $handicapManager
-     * @param VilleManager $villeManager
      */
-    public function __construct(
-        HandicapManager $handicapManager,
-        VilleManager $villeManager
-    )
+    public function __construct(HandicapManager $handicapManager)
     {
         $this->handicapManager = $handicapManager;
-        $this->villeManager = $villeManager;
     }
 
     /**
-     * @Route("/handicap/{city}", name="handicap", defaults={"city"="Z"}))
+     * @Route("/handicap/{page}", name="handicap", defaults={"page"="1"}))
      *
-     * @param string $city
+     * @param string $page
      *
      * @return Response
      */
-    public function TrainStationsCity(string $city): Response
+    public function HandicapPaginated(string $page): Response
     {
-        $villes = $this->villeManager->getVilles();
-        $handicap = $city == "Z" ?
-            $this->handicapManager->getHandicap() :
-            $this->handicapManager->getHandicapByCity($city);
+        $handicap = $this->handicapManager->getHandicap($page - 1);
 
-        return $this->render('trainstations/trainstations.html.twig', [
-            'villes' => $villes,
+        $nbHandicap = $this->handicapManager->countHandicap();
+        $nbPages = ceil($nbHandicap[0]["count"]["value"] / 25.0) + 2;
+
+        return $this->render('handicap/handicap.html.twig', [
             'handicap' => $handicap,
+            'nbPages' => $nbPages,
+            'page' => $page,
         ]);
     }
 }

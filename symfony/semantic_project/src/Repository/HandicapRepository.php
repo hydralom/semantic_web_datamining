@@ -19,12 +19,14 @@ class HandicapRepository
     private $url = "http://jena_fuseki:3030/handicap/query?query=";
 
     /**
+     * @param $offset
+     *
      * @return mixed
      */
-    public function getHandicap()
+    public function getHandicap($offset)
     {
         $query = "
-           SELECT ?nom_gare ?ramp ?wheelchairs ?wheelchairs_on_ramps ?helped_disabled_nb ?simple_support
+           SELECT distinct ?nom_gare ?helped_disabled_nb ?simple_support
            WHERE {
              ?subject <http://confinos.fr/disabled_person_helped#nom_gare> ?nom_gare .
              ?subject <http://confinos.fr/disabled_person_helped#ramps> ?ramps .
@@ -34,6 +36,8 @@ class HandicapRepository
              ?subject <http://confinos.fr/disabled_person_helped#simple_support> ?simple_support .
            }
            ORDER BY ASC(?nom_gare)
+           OFFSET ".$offset."
+           LIMIT 25
         ";
 
         $fuseki_response = $this->askFuseki($this->url . urlencode($query));
@@ -41,17 +45,16 @@ class HandicapRepository
         return $content["results"]["bindings"];
     }
 
-    public function getHandicapByCity(string $city)
+    /**
+     * @return mixed
+     */
+    public function countHandicap()
     {
         $query = "
-           SELECT ?nom ?lat ?lon
+           SELECT (COUNT(distinct ?a) AS ?count)
            WHERE {
-               ?subject <http://confinos.fr/train_stations#commune_name> \"" . $city . "\" .
-               ?subject <http://confinos.fr/train_stations#nom_gare_pretty> ?nom .
-               ?subject <http://confinos.fr/train_stations#latitude> ?lat .
-               ?subject <http://confinos.fr/train_stations#longitude> ?lon .
+             ?a ?b ?c
            }
-           ORDER BY ASC(?nom)
         ";
 
         $fuseki_response = $this->askFuseki($this->url . urlencode($query));

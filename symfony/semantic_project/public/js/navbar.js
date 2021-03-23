@@ -1,5 +1,3 @@
-
-
 // ---------Responsive-navbar-active-animation-----------
 function test() {
     let tabsNewAnim = $('#navbarSupportedContent');

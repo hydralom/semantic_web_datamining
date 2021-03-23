@@ -13,17 +13,20 @@
                 {#<li class="nav-item">
                     <a class="nav-link" href="javascript:void(0);"><i class="fas fa-tachometer-alt"></i>Dashboard</a>
                 </li>#}
-                <li class="nav-item active">
-                    <a class="nav-link" href="{{ path('trainstations') }}"><i class="far fa-address-book"></i>Train stations</a>
+                <li class="nav-item {% if app.request.attributes.get('_route') == 'trainstations' %}active{% endif %}">
+                    <a class="nav-link" href="{{ path('trainstations') }}"><i class="fas fa-subway"></i>Train stations</a>
+                </li>
+                <li class="nav-item {% if app.request.attributes.get('_route') == 'handicap' %}active{% endif %}">
+                    <a class="nav-link" href="{{ path('handicap') }}"><i class="fas fa-wheelchair"></i>Handicap</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="javascript:void(0);"><i class="far fa-clone"></i>API 2</a>
+                    <a class="nav-link" href="javascript:void(0);"><i class="fas fa-wifi"></i>Wifi</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="javascript:void(0);"><i class="far fa-calendar-alt"></i>API 3</a>
+                    <a class="nav-link" href="javascript:void(0);"><i class="fas fa-exclamation-triangle"></i>Accident du travail</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="javascript:void(0);"><i class="far fa-chart-bar"></i>Carte</a>
+                    <a class="nav-link" href="{{ path('carte_all_in_one') }}"><i class="fas fa-map-marked-alt"></i>Carte</a>
                 </li>
             </ul>
         </div>
