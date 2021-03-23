@@ -13,7 +13,7 @@ services:
         volumes:
             - './fuseki:/fuseki'
         environment:
-            - ADMIN_PASSWORD=password
+            - ADMIN_PASSWORD=admin
         networks:
             - semantics
 
@@ -32,6 +32,6 @@ services:
         networks:
             - semantics
 
-#volumes:
-#    jena_fuseki:
-#        driver: local
+volumes:
+    jena_fuseki:
+        driver: local
