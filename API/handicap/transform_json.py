@@ -12,22 +12,21 @@ https://ressources.data.sncf.com/api/records/1.0/search/
     &sort=datemensuel
     &facet=datemensuel
     &facet=gare
-    &refine.datemensuel=2020%2F11
     &refine.gare_regionsncf_libelle=REGION+DE+PARIS-NORD
 """
 
-dateMensuel = "&refine.datemensuel=2020/"
 regions = ["REGION+DE+PARIS-NORD",
            "REGION+DE+PARIS-SUD-EST",
            "REGION+DE+PARIS SAINT-LAZARE",
            "REGION+DE+PARIS-EST"]
 
-url = "https://ressources.data.sncf.com/api/records/1.0/search/?dataset=referentiel-gares-voyageurs&q=&rows=200&refine.gare_regionsncf_libelle="
+url = "https://ressources.data.sncf.com/api/records/1.0/search/?dataset=accompagnement-pmr-gares&q=&rows=200&refine.gare_regionsncf_libelle="
 
 context = {
     "@vocab": "http://confinos.fr/disabled_person_helped#",
     "@base": "http://confinos.fr/disabled_person_helped",
-    "uic_code": "@id",
+    # fields qu'on garde
+    "uic": "@id",
     "fauteuil": {
         "@id": "wheelchairs",
         "@type": "https://www.w3.org/2001/XMLSchema#integer"
@@ -77,21 +76,19 @@ def createLogger():
 def getAllData():
     data = []
 
-    for i in range(11):
-        for region in regions:
-            chiffre = i + 1
-            response = requests.request("GET", url + region + dateMensuel + str(chiffre))
+    for region in regions:
+        response = requests.request("GET", url + region)
 
-            logger.info("Call api %s return %s status" % (response.url, response.status_code))
+        logger.info("Call api %s return %s status" % (response.url, response.status_code))
 
-            r_json = response.json()
-            r_json = r_json["records"]
+        r_json = response.json()
+        r_json = r_json["records"]
 
-            for train_station in r_json:
-                temp = train_station["fields"]
-                data.append(temp)
+        for train_station in r_json:
+            temp = train_station["fields"]
+            data.append(temp)
 
-            time.sleep(1)
+        time.sleep(1)
 
     return data
 
