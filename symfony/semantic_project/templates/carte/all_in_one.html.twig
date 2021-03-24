@@ -4,12 +4,63 @@
     {% include 'navbar.html.twig' %}
 
     <div class="mt-4 container">
-        <div id="map"></div>
-        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCSqkkYesHNz_pdNWLmvEgvPtMSrIX43Zs&callback=initMap&libraries=&v=weekly" async></script>
-    </div>
-{% endblock %}
+        <div class="row">
+            <div id="mapid"></div>
+            <script src="{{ asset('../js/map.js') }}"></script>
+            <script>
+                // let marker = L.marker([48.876742, 2.358424]).addTo(mymap);
+                // marker.bindPopup("<b>Hello world!</b><br>I am a popup.");
 
-{% block javascripts %}
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
-    <script src="{{ asset('../js/map.js') }}"></script>
+                let grosTas = {{ grosTas|json_encode() }};
+                console.log(grosTas);
+                for(let gT in grosTas) {
+                    console.log("coucou");
+
+                    let marker = L.marker([49.003652, 2.570892]).addTo(mymap);
+                    // let marker = L.marker([gT.lat.value, gT.lon.value]).addTo(mymap);
+                    marker.bindPopup("<b>Hello world!</b><br>I am a popup.");
+                }
+
+            </script>
+        </div>
+
+        <div class="row">
+            <div class="mt-4 col-12">
+                <table class="table table-striped">
+                    <thead>
+                    <tr>
+                        <th>Nom Gare</th>
+                        <th>Ville</th>
+                        <th>Code postal</th>
+                        <th>Latitude</th>
+                        <th>Longitude</th>
+                        <th>Legume aidé</th>
+                        <th>Is there wifi here ?</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% for gT in grosTas %}
+                        <tr>
+                            <td>{{ gT.nom_gare }}</td>
+                            <td>{{ gT.ville }}</td>
+                            <td>{{ gT.cp }}</td>
+                            <td>{{ gT.lat }}</td>
+                            <td>{{ gT.lon }}</td>
+                            <td>
+                            {% if gT.helped_disabled_nb is defined %}
+                                {{ gT.helped_disabled_nb|default("0") }}
+                            {% endif %}
+                            </td>
+                            <td>
+                            {% if gT.helped_disabled_nb is defined %}
+                                {{ gT.wifi|default("on sait pas") }}
+                            {% endif %}
+                            </td>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
 {% endblock %}

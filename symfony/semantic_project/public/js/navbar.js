@@ -39,6 +39,7 @@ $(window).on('resize', function () {
         test();
     }, 500);
 });
+
 $(".navbar-toggler").click(function () {
     setTimeout(function () {
         test();

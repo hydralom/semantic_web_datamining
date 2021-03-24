@@ -33,7 +33,17 @@ class TrainStationManager
      */
     public function getTrainStationsByCity($city)
     {
-        return $this->trainStationRepository->getTrainStationsByCity($city);
+        $results = $this->trainStationRepository->getTrainStationsByCity($city);
+
+        $tab = [];
+        foreach ($results as $res) {
+            $tmp = [];
+            $tmp["nom"] = $res["nom"]["value"];
+            $tmp["lat"] = $res["lat"]["value"];
+            $tmp["lon"] = $res["lon"]["value"];
+            array_push($tab, $tmp);
+        }
+        return $tab;
     }
 
     /**
@@ -41,6 +51,16 @@ class TrainStationManager
      */
     public function getTrainStations()
     {
-        return $this->trainStationRepository->getTrainStations();
+        $results = $this->trainStationRepository->getTrainStations();
+
+        $tab = [];
+        foreach ($results as $res) {
+            $tmp = [];
+            $tmp["nom"] = $res["nom"]["value"];
+            $tmp["lat"] = $res["lat"]["value"];
+            $tmp["lon"] = $res["lon"]["value"];
+            array_push($tab, $tmp);
+        }
+        return $tab;
     }
 }
