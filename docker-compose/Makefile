@@ -18,9 +18,7 @@ build:
 	@docker-compose build
 
 install:
-	docker-compose exec semantic_project composer install;
-	#docker-compose exec semantic_project php bin/console d:m:m --no-interaction; \
-	#docker-compose exec semantic_project php bin/console d:f:l --no-interaction
+	@docker-compose exec semantic_project composer install;
 
 up:
 	@docker-compose up -d; \
