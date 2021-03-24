@@ -8,23 +8,29 @@
             <div id="mapid"></div>
             <script src="{{ asset('../js/map.js') }}"></script>
             <script>
-                // let marker = L.marker([48.876742, 2.358424]).addTo(mymap);
-                // marker.bindPopup("<b>Hello world!</b><br>I am a popup.");
+                let grosTas = JSON.parse("{{ grosTas|json_encode }}".replace(/&quot;/g,'"'));
+                for(let i = 0; i < grosTas.length; i++){
+                    // console.log(grosTas[i]);
 
-                let grosTas = {{ grosTas|json_encode() }};
-                console.log(grosTas);
-                for(let gT in grosTas) {
-                    console.log("coucou");
+                    let marker = L.marker([grosTas[i].lat, grosTas[i].lon]).addTo(mymap);
 
-                    let marker = L.marker([49.003652, 2.570892]).addTo(mymap);
-                    // let marker = L.marker([gT.lat.value, gT.lon.value]).addTo(mymap);
-                    marker.bindPopup("<b>Hello world!</b><br>I am a popup.");
+                    let popUpString =
+                        "<b>" + grosTas[i].nom_gare + "</b>" +
+                        "<br>" +
+                        "<br>Ville : " + grosTas[i].ville +
+                        "<br>Code postal : " + grosTas[i].cp
+                    ;
+                    if("helped_disabled_nb" in grosTas[i])
+                        popUpString +="<br><br>Handicapés aidés : " + grosTas[i].helped_disabled_nb;
+                    if("wifi" in grosTas[i])
+                        popUpString += "<br><br><i class=\"fas fa-wifi\"></i>" + grosTas[i].wifi;
+
+                    marker.bindPopup(popUpString);
                 }
-
             </script>
         </div>
 
-        <div class="row">
+        {#<div class="row">
             <div class="mt-4 col-12">
                 <table class="table table-striped">
                     <thead>
@@ -34,7 +40,7 @@
                         <th>Code postal</th>
                         <th>Latitude</th>
                         <th>Longitude</th>
-                        <th>Legume aidé</th>
+                        <th>Handicapés aidés</th>
                         <th>Is there wifi here ?</th>
                     </tr>
                     </thead>
@@ -61,6 +67,6 @@
                     </tbody>
                 </table>
             </div>
-        </div>
+        </div>#}
     </div>
 {% endblock %}
