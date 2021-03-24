@@ -10,9 +10,6 @@
                     <div class="left"></div>
                     <div class="right"></div>
                 </div>
-                {#<li class="nav-item">
-                    <a class="nav-link" href="javascript:void(0);"><i class="fas fa-tachometer-alt"></i>Dashboard</a>
-                </li>#}
                 <li class="nav-item {% if app.request.attributes.get('_route') == 'trainstations' %}active{% endif %}">
                     <a class="nav-link" href="{{ path('trainstations') }}"><i class="fas fa-subway"></i>Train stations</a>
                 </li>
@@ -23,7 +20,7 @@
                     <a class="nav-link" href="javascript:void(0);"><i class="fas fa-wifi"></i>Wifi</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="javascript:void(0);"><i class="fas fa-exclamation-triangle"></i>Accident du travail</a>
+                    <a class="nav-link" href="javascript:void(0);"><i class="fas fa-users"></i>Age des clients</a>
                 </li>
                 <li class="nav-item {% if app.request.attributes.get('_route') == 'carte' %}active{% endif %}">
                     <a class="nav-link" href="{{ path('carte') }}"><i class="fas fa-map-marked-alt"></i>Carte</a>

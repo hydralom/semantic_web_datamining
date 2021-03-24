@@ -58,8 +58,8 @@ def getAllData():
     r_json = response.json()
     r_json = r_json["records"]
 
-    for train_station in r_json:
-        temp = train_station["fields"]
+    for wifi in r_json:
+        temp = wifi["fields"]
         temp["uic"] = "0087" + temp["uic"]
         data.append(temp)
 
@@ -68,11 +68,11 @@ def getAllData():
     return data
 
 
-def createJsonLDDict(tS):
+def createJsonLDDict(wifis):
     dico = {"@context": context, "data": []}
 
-    for train_station in tS:
-        dico["data"].append(train_station)
+    for wifi in wifis:
+        dico["data"].append(wifi)
 
     return dico
 
@@ -87,11 +87,11 @@ if __name__ == '__main__':
     logger.info("START %s", sys.argv[0])
 
     logger.info("Début du crawling : ==========")
-    train_stations = getAllData()
+    wifis = getAllData()
     logger.info("Fin du crawling : ==========")
-    # print(len(train_stations))  # check if 401 results
+    # print(len(wifis))
 
-    dataToExport = createJsonLDDict(train_stations)
+    dataToExport = createJsonLDDict(wifis)
     logger.info("Data de l'API converti en DICT ==========")
 
     exportDictToJsonFile(dataToExport)

@@ -59,18 +59,18 @@ def getAllData():
     r_json = response.json()
     r_json = r_json["records"]
 
-    for train_station in r_json:
-        temp = train_station["fields"]
+    for age_client in r_json:
+        temp = age_client["fields"]
         data.append(temp)
 
     return data
 
 
-def createJsonLDDict(tS):
+def createJsonLDDict(age_clients):
     dico = {"@context": context, "data": []}
 
-    for train_station in tS:
-        dico["data"].append(train_station)
+    for age_client in age_clients:
+        dico["data"].append(age_client)
 
     return dico
 
@@ -85,11 +85,11 @@ if __name__ == '__main__':
     logger.info("START %s", sys.argv[0])
 
     logger.info("Début du crawling : ==========")
-    train_stations = getAllData()
+    age_clients = getAllData()
     logger.info("Fin du crawling : ==========")
-    # print(len(train_stations))  # check if 401 results
+    # print(len(age_clients))
 
-    dataToExport = createJsonLDDict(train_stations)
+    dataToExport = createJsonLDDict(age_clients)
     logger.info("Data de l'API converti en DICT ==========")
 
     exportDictToJsonFile(dataToExport)

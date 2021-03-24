@@ -41,6 +41,16 @@ class TrainStation extends AbstractController
     }
 
     /**
+     * @Route("/", name="home")
+     *
+     * @return Response
+     */
+    public function RedirectToTrainstations(): Response
+    {
+        return $this->redirect("trainstations");
+    }
+
+    /**
      * @Route("/trainstations/{city}", name="trainstations", defaults={"city"="Z"}))
      *
      * @param string $city
