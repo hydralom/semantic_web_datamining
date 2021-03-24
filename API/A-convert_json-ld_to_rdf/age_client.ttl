@@ -1,0 +1,976 @@
+@prefix : <http://confinos.fr/Age_client_par_gare#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://confinos.fr/111849> :nom_gare "Marne la Vallée Chessy" ;
+    :pourcentage 3.8e-01,
+        1.69e+00,
+        2.05e+00,
+        2.68e+00,
+        4.02e+00,
+        4.4e+00,
+        8.48e+01 ;
+    :record_year "2013" ;
+    :tranche_age "19 ans et moins",
+        "20 ans à 29 ans",
+        "30 ans à 39 ans",
+        "40 ans à 49 ans",
+        "50 ans à 59 ans",
+        "60 ans et plus",
+        "Non communiqué" .
+
+<http://confinos.fr/113001> :nom_gare "Paris Est" ;
+    :pourcentage 7.7e+00,
+        7.94e+00,
+        1.22e+01,
+        1.42e+01,
+        1.69e+01,
+        1.75e+01,
+        2.37e+01 ;
+    :record_year "2012" ;
+    :tranche_age "19 ans et moins",
+        "20 ans à 29 ans",
+        "30 ans à 39 ans",
+        "40 ans à 49 ans",
+        "50 ans à 59 ans",
+        "60 ans et plus",
+        "Non communiqué" .
+
+<http://confinos.fr/118000> :nom_gare "Troyes" ;
+    :pourcentage 1.04e+01,
+        1.36e+01,
+        1.49e+01,
+        1.64e+01,
+        1.99e+01,
+        2.47e+01 ;
+    :record_year "2015" ;
+    :tranche_age "19 ans et moins",
+        "20 ans à 29 ans",
+        "30 ans à 39 ans",
+        "40 ans à 49 ans",
+        "50 ans à 59 ans",
+        "60 ans et plus" .
+
+<http://confinos.fr/141002> :nom_gare "Nancy" ;
+    :pourcentage 1.08e+01,
+        1.14e+01,
+        1.16e+01,
+        1.37e+01,
+        2.35e+01,
+        2.9e+01 ;
+    :record_year "2014" ;
+    :tranche_age "19 ans et moins",
+        "20 ans à 29 ans",
+        "30 ans à 39 ans",
+        "40 ans à 49 ans",
+        "50 ans à 59 ans",
+        "60 ans et plus" .
+
+<http://confinos.fr/142109> :nom_gare "Lorraine TGV" ;
+    :pourcentage 3.22e+00,
+        1.47e+01,
+        1.53e+01,
+        1.92e+01,
+        1.97e+01,
+        2.79e+01 ;
+    :record_year "2017" ;
+    :tranche_age "19 ans et moins",
+        "20 ans à 29 ans",
+        "30 ans à 39 ans",
+        "40 ans à 49 ans",
+        "50 ans à 59 ans",
+        "60 ans et plus" .
+
+<http://confinos.fr/171009> :nom_gare "Reims" ;
+    :pourcentage 9.75e+00,
+        1.3e+01,
+        1.43e+01,
+        1.49e+01,
+        2.31e+01,
+        2.49e+01 ;
+    :record_year "2016" ;
+    :tranche_age "19 ans et moins",
+        "20 ans à 29 ans",
+        "30 ans à 39 ans",
+        "40 ans à 49 ans",
+        "50 ans à 59 ans",
+        "60 ans et plus" .
+
+<http://confinos.fr/182014> :nom_gare "Colmar" ;
+    :pourcentage 7.74e+00,
+        9.79e+00,
+        9.81e+00,
+        1.14e+01,
+        2.53e+01,
+        3.59e+01 ;
+    :record_year "2017" ;
+    :tranche_age "19 ans et moins",
+        "20 ans à 29 ans",
+        "30 ans à 39 ans",
+        "40 ans à 49 ans",
+        "50 ans à 59 ans",
+        "60 ans et plus" .
+
+<http://confinos.fr/182063> :nom_gare "Mulhouse" ;
+    :pourcentage 5.68e+00,
+        1.26e+01,
+        1.36e+01,
+        1.67e+01,
+        2.55e+01,
+        2.59e+01 ;
+    :record_year "2014" ;
+    :tranche_age "19 ans et moins",
+        "20 ans à 29 ans",
+        "30 ans à 39 ans",
+        "40 ans à 49 ans",
+        "50 ans à 59 ans",
+        "60 ans et plus" .
+
+<http://confinos.fr/192039> :nom_gare "Metz" ;
+    :pourcentage 1.6e-01,
+        9.9e+00,
+        1.15e+01,
+        1.34e+01,
+        1.36e+01,
+        1.4e+01,
+        1.42e+01,
+        1.58e+01,
+        1.67e+01,
+        1.71e+01,
+        2.97e+01,
+        2.98e+01 ;
+    :record_year "2011",
+        "2016" ;
+    :tranche_age "19 ans et moins",
+        "20 ans à 29 ans",
+        "30 ans à 39 ans",
+        "40 ans à 49 ans",
+        "50 ans à 59 ans",
+        "60 ans et plus",
+        "Non communiqué" .
+
+<http://confinos.fr/212027> :nom_gare "Strasbourg" ;
+    :pourcentage 6.65e+00,
+        6.72e+00,
+        7.67e+00,
+        8.12e+00,
+        8.33e+00,
+        9e+00,
+        1.35e+01,
+        1.46e+01,
+        1.48e+01,
+        1.8e+01,
+        2.16e+01,
+        2.65e+01,
+        4.45e+01 ;
+    :record_year "2010",
+        "2016" ;
+    :tranche_age "19 ans et moins",
+        "20 ans à 29 ans",
+        "30 ans à 39 ans",
+        "40 ans à 49 ans",
+        "50 ans à 59 ans",
+        "60 ans et plus",
+        "Non communiqué" .
+
+<http://confinos.fr/223263> :nom_gare "Lille Europe" ;
+    :pourcentage 2.9e-01,
+        5.94e+00,
+        1.26e+01,
+        1.63e+01,
+        1.87e+01,
+        2.04e+01,
+        2.57e+01 ;
+    :record_year "2013" ;
+    :tranche_age "19 ans et moins",
+        "20 ans à 29 ans",
+        "30 ans à 39 ans",
+        "40 ans à 49 ans",
+        "50 ans à 59 ans",
+        "60 ans et plus",
+        "Non communiqué" .
+
+<http://confinos.fr/271007> :nom_gare "Paris Nord" ;
+    :pourcentage 5.01e+00,
+        5.44e+00,
+        1.17e+01,
+        1.46e+01,
+        1.66e+01,
+        2.06e+01,
+        2.61e+01 ;
+    :record_year "2012" ;
+    :tranche_age "19 ans et moins",
+        "20 ans à 29 ans",
+        "30 ans à 39 ans",
+        "40 ans à 49 ans",
+        "50 ans à 59 ans",
+        "60 ans et plus",
+        "Non communiqué" .
+
+<http://confinos.fr/271494> :nom_gare "Aéroport Charles de Gaulle 2 TGV" ;
+    :pourcentage 9.3e-01,
+        3.9e+00,
+        4.48e+00,
+        5.8e+00,
+        6.58e+00,
+        7.55e+00,
+        7.08e+01 ;
+    :record_year "2013" ;
+    :tranche_age "19 ans et moins",
+        "20 ans à 29 ans",
+        "30 ans à 39 ans",
+        "40 ans à 49 ans",
+        "50 ans à 59 ans",
+        "60 ans et plus",
+        "Non communiqué" .
+
+<http://confinos.fr/286005> :nom_gare "Lille Flandres" ;
+    :pourcentage 1.1e-01,
+        7.57e+00,
+        1.31e+01,
+        1.53e+01,
+        1.59e+01,
+        3.21e+01 ;
+    :record_year "2013" ;
+    :tranche_age "19 ans et moins",
+        "20 ans à 29 ans",
+        "30 ans à 39 ans",
+        "40 ans à 49 ans",
+        "50 ans à 59 ans",
+        "60 ans et plus",
+        "Non communiqué" .
+
+<http://confinos.fr/300822> :nom_gare "Belfort Montbéliard TGV" ;
+    :pourcentage 4.92e+00,
+        1.43e+01,
+        1.94e+01,
+        1.99e+01,
+        2.07e+01,
+        2.08e+01 ;
+    :record_year "2015" ;
+    :tranche_age "19 ans et moins",
+        "20 ans à 29 ans",
+        "30 ans à 39 ans",
+        "40 ans à 49 ans",
+        "50 ans à 59 ans",
+        "60 ans et plus" .
+
+<http://confinos.fr/300863> :nom_gare "Besançon Franche-Comté TGV" ;
+    :pourcentage 1.01e+01,
+        1.45e+01,
+        1.67e+01,
+        1.85e+01,
+        1.96e+01,
+        2.07e+01 ;
+    :record_year "2015" ;
+    :tranche_age "19 ans et moins",
+        "20 ans à 29 ans",
+        "30 ans à 39 ans",
+        "40 ans à 49 ans",
+        "50 ans à 59 ans",
+        "60 ans et plus" .
+
+<http://confinos.fr/313874> :nom_gare "Amiens" ;
+    :pourcentage 6.51e+00,
+        8.05e+00,
+        8.86e+00,
+        9.89e+00,
+        3.22e+01,
+        3.45e+01 ;
+    :record_year "2015" ;
+    :tranche_age "19 ans et moins",
+        "20 ans à 29 ans",
+        "30 ans à 39 ans",
+        "40 ans à 49 ans",
+        "50 ans à 59 ans",
+        "60 ans et plus" .
+
+<http://confinos.fr/318964> :nom_gare "Avignon TGV" ;
+    :pourcentage 5.8e+00,
+        1.6e+01,
+        1.63e+01,
+        1.65e+01,
+        2.11e+01,
+        2.42e+01 ;
+    :record_year "2015" ;
+    :tranche_age "19 ans et moins",
+        "20 ans à 29 ans",
+        "30 ans à 39 ans",
+        "40 ans à 49 ans",
+        "50 ans à 59 ans",
+        "60 ans et plus" .
+
+<http://confinos.fr/319012> :nom_gare "Aix en Provence-TGV" ;
+    :pourcentage 2.23e+00,
+        1.7e+01,
+        1.76e+01,
+        1.86e+01,
+        1.89e+01,
+        2.57e+01 ;
+    :record_year "2015" ;
+    :tranche_age "19 ans et moins",
+        "20 ans à 29 ans",
+        "30 ans à 39 ans",
+        "40 ans à 49 ans",
+        "50 ans à 59 ans",
+        "60 ans et plus" .
+
+<http://confinos.fr/345025> :nom_gare "Lens" ;
+    :pourcentage 6.96e+00,
+        9.51e+00,
+        1.12e+01,
+        1.69e+01,
+        2.54e+01,
+        3.01e+01 ;
+    :record_year "2016" ;
+    :tranche_age "19 ans et moins",
+        "20 ans à 29 ans",
+        "30 ans à 39 ans",
+        "40 ans à 49 ans",
+        "50 ans à 59 ans",
+        "60 ans et plus" .
+
+<http://confinos.fr/384008> :nom_gare "Paris St Lazare" ;
+    :pourcentage 1.12e+00,
+        7.06e+00,
+        7.73e+00,
+        1.47e+01,
+        1.79e+01,
+        2.14e+01,
+        3.01e+01 ;
+    :record_year "2013" ;
+    :tranche_age "19 ans et moins",
+        "20 ans à 29 ans",
+        "30 ans à 39 ans",
+        "40 ans à 49 ans",
+        "50 ans à 59 ans",
+        "60 ans et plus",
+        "Non communiqué" .
+
+<http://confinos.fr/391003> :nom_gare "Paris Montparnasse 1 et 2 + Vaugirard" ;
+    :pourcentage 4.84e+00,
+        7.28e+00,
+        1.19e+01,
+        1.52e+01,
+        1.75e+01,
+        1.8e+01,
+        2.53e+01 ;
+    :record_year "2012" ;
+    :tranche_age "19 ans et moins",
+        "20 ans à 29 ans",
+        "30 ans à 39 ans",
+        "40 ans à 49 ans",
+        "50 ans à 59 ans",
+        "60 ans et plus",
+        "Non communiqué" .
+
+<http://confinos.fr/393702> :nom_gare "Massy TGV" ;
+    :pourcentage 1.24e+00,
+        5.08e+00,
+        1.01e+01,
+        1.93e+01,
+        2.11e+01,
+        2.12e+01,
+        2.19e+01 ;
+    :record_year "2013" ;
+    :tranche_age "19 ans et moins",
+        "20 ans à 29 ans",
+        "30 ans à 39 ans",
+        "40 ans à 49 ans",
+        "50 ans à 59 ans",
+        "60 ans et plus",
+        "Non communiqué" .
+
+<http://confinos.fr/396002> :nom_gare "Le Mans" ;
+    :pourcentage 1.39e+01,
+        1.45e+01,
+        1.54e+01,
+        1.75e+01,
+        1.94e+01 ;
+    :record_year "2015" ;
+    :tranche_age "19 ans et moins",
+        "20 ans à 29 ans",
+        "30 ans à 39 ans",
+        "40 ans à 49 ans",
+        "50 ans à 59 ans",
+        "60 ans et plus" .
+
+<http://confinos.fr/411017> :nom_gare "Rouen Rive Droite" ;
+    :pourcentage 1.09e+01,
+        1.19e+01,
+        1.43e+01,
+        1.59e+01,
+        1.78e+01,
+        2.92e+01 ;
+    :record_year "2014" ;
+    :tranche_age "19 ans et moins",
+        "20 ans à 29 ans",
+        "30 ans à 39 ans",
+        "40 ans à 49 ans",
+        "50 ans à 59 ans",
+        "60 ans et plus" .
+
+<http://confinos.fr/444000> :nom_gare "Caen" ;
+    :pourcentage 5e-01,
+        1.14e+01,
+        1.19e+01,
+        1.6e+01,
+        1.63e+01,
+        1.92e+01,
+        2.47e+01 ;
+    :record_year "2012" ;
+    :tranche_age "19 ans et moins",
+        "20 ans à 29 ans",
+        "30 ans à 39 ans",
+        "40 ans à 49 ans",
+        "50 ans à 59 ans",
+        "60 ans et plus",
+        "Non communiqué" .
+
+<http://confinos.fr/444877> :nom_gare "Cherbourg" ;
+    :pourcentage 6.84e+00,
+        1.59e+01,
+        1.6e+01,
+        1.89e+01,
+        1.91e+01,
+        2.33e+01 ;
+    :record_year "2015" ;
+    :tranche_age "19 ans et moins",
+        "20 ans à 29 ans",
+        "30 ans à 39 ans",
+        "40 ans à 49 ans",
+        "50 ans à 59 ans",
+        "60 ans et plus" .
+
+<http://confinos.fr/471003> :nom_gare "Rennes" ;
+    :pourcentage 4.1e-01,
+        1.25e+01,
+        1.39e+01,
+        1.49e+01,
+        1.63e+01,
+        1.69e+01,
+        2.5e+01 ;
+    :record_year "2014" ;
+    :tranche_age "19 ans et moins",
+        "20 ans à 29 ans",
+        "30 ans à 39 ans",
+        "40 ans à 49 ans",
+        "50 ans à 59 ans",
+        "60 ans et plus",
+        "Non communiqué" .
+
+<http://confinos.fr/476002> :nom_gare "Lorient" ;
+    :pourcentage 1.38e+01,
+        1.48e+01,
+        1.53e+01,
+        1.63e+01,
+        1.83e+01,
+        2.16e+01 ;
+    :record_year "2010" ;
+    :tranche_age "19 ans et moins",
+        "20 ans à 29 ans",
+        "30 ans à 39 ans",
+        "40 ans à 49 ans",
+        "50 ans à 59 ans",
+        "60 ans et plus" .
+
+<http://confinos.fr/478404> :nom_gare "Laval" ;
+    :pourcentage 1.12e+01,
+        1.46e+01,
+        1.52e+01,
+        1.61e+01,
+        1.9e+01,
+        2.39e+01 ;
+    :record_year "2011" ;
+    :tranche_age "19 ans et moins",
+        "20 ans à 29 ans",
+        "30 ans à 39 ans",
+        "40 ans à 49 ans",
+        "50 ans à 59 ans",
+        "60 ans et plus" .
+
+<http://confinos.fr/481002> :nom_gare "Nantes" ;
+    :pourcentage 1.08e+00,
+        9.15e+00,
+        1.52e+01,
+        1.75e+01,
+        1.81e+01,
+        2.38e+01 ;
+    :record_year "2014" ;
+    :tranche_age "19 ans et moins",
+        "20 ans à 29 ans",
+        "30 ans à 39 ans",
+        "40 ans à 49 ans",
+        "50 ans à 59 ans",
+        "60 ans et plus",
+        "Non communiqué" .
+
+<http://confinos.fr/484006> :nom_gare "Angers Saint Laud" ;
+    :pourcentage 1.31e+01,
+        1.6e+01,
+        1.68e+01,
+        1.72e+01,
+        2.01e+01 ;
+    :record_year "2015" ;
+    :tranche_age "19 ans et moins",
+        "20 ans à 29 ans",
+        "30 ans à 39 ans",
+        "40 ans à 49 ans",
+        "50 ans à 59 ans",
+        "60 ans et plus" .
+
+<http://confinos.fr/547000> :nom_gare "Paris Austerlitz" ;
+    :pourcentage 2.2e+00,
+        4.6e+00,
+        1.35e+01,
+        1.75e+01,
+        1.79e+01,
+        1.92e+01,
+        2.51e+01 ;
+    :record_year "2013" ;
+    :tranche_age "19 ans et moins",
+        "20 ans à 29 ans",
+        "30 ans à 39 ans",
+        "40 ans à 49 ans",
+        "50 ans à 59 ans",
+        "60 ans et plus",
+        "Non communiqué" .
+
+<http://confinos.fr/571000> :nom_gare "Tours" ;
+    :pourcentage 1.09e+01,
+        1.43e+01,
+        1.46e+01,
+        1.73e+01,
+        1.81e+01,
+        2.47e+01 ;
+    :record_year "2016" ;
+    :tranche_age "19 ans et moins",
+        "20 ans à 29 ans",
+        "30 ans à 39 ans",
+        "40 ans à 49 ans",
+        "50 ans à 59 ans",
+        "60 ans et plus" .
+
+<http://confinos.fr/575001> :nom_gare "Poitiers" ;
+    :pourcentage 1.31e+01,
+        1.38e+01,
+        1.51e+01,
+        1.74e+01,
+        2.68e+01 ;
+    :record_year "2015" ;
+    :tranche_age "19 ans et moins",
+        "20 ans à 29 ans",
+        "30 ans à 39 ans",
+        "40 ans à 49 ans",
+        "50 ans à 59 ans",
+        "60 ans et plus" .
+
+<http://confinos.fr/581009> :nom_gare "Bordeaux Saint-Jean" ;
+    :pourcentage 1.36e+01,
+        1.37e+01,
+        1.49e+01,
+        1.52e+01,
+        1.72e+01,
+        2.54e+01 ;
+    :record_year "2014" ;
+    :tranche_age "19 ans et moins",
+        "20 ans à 29 ans",
+        "30 ans à 39 ans",
+        "40 ans à 49 ans",
+        "50 ans à 59 ans",
+        "60 ans et plus" .
+
+<http://confinos.fr/583005> :nom_gare "Angoulême" ;
+    :pourcentage 2.48e+00,
+        1.13e+01,
+        1.17e+01,
+        1.39e+01,
+        1.7e+01,
+        1.81e+01,
+        2.55e+01 ;
+    :record_year "2012" ;
+    :tranche_age "19 ans et moins",
+        "20 ans à 29 ans",
+        "30 ans à 39 ans",
+        "40 ans à 49 ans",
+        "50 ans à 59 ans",
+        "60 ans et plus",
+        "Non communiqué" .
+
+<http://confinos.fr/611004> :nom_gare "Toulouse Matabiau" ;
+    :pourcentage 1.18e+01,
+        1.36e+01,
+        1.47e+01,
+        1.51e+01,
+        1.72e+01,
+        2.77e+01 ;
+    :record_year "2014" ;
+    :tranche_age "19 ans et moins",
+        "20 ans à 29 ans",
+        "30 ans à 39 ans",
+        "40 ans à 49 ans",
+        "50 ans à 59 ans",
+        "60 ans et plus" .
+
+<http://confinos.fr/673004> :nom_gare "Bayonne" ;
+    :pourcentage 1.1e+01,
+        1.45e+01,
+        1.49e+01,
+        1.71e+01,
+        1.94e+01,
+        2.3e+01 ;
+    :record_year "2013" ;
+    :tranche_age "19 ans et moins",
+        "20 ans à 29 ans",
+        "30 ans à 39 ans",
+        "40 ans à 49 ans",
+        "50 ans à 59 ans",
+        "60 ans et plus" .
+
+<http://confinos.fr/673400> :nom_gare "Biarritz" ;
+    :pourcentage 7.82e+00,
+        9.14e+00,
+        1.41e+01,
+        1.43e+01,
+        1.96e+01,
+        3.51e+01 ;
+    :record_year "2016" ;
+    :tranche_age "19 ans et moins",
+        "20 ans à 29 ans",
+        "30 ans à 39 ans",
+        "40 ans à 49 ans",
+        "50 ans à 59 ans",
+        "60 ans et plus" .
+
+<http://confinos.fr/677005> :nom_gare "Hendaye" ;
+    :pourcentage 9.28e+00,
+        9.44e+00,
+        1.21e+01,
+        1.26e+01,
+        1.35e+01,
+        4.31e+01 ;
+    :record_year "2016" ;
+    :tranche_age "19 ans et moins",
+        "20 ans à 29 ans",
+        "30 ans à 39 ans",
+        "40 ans à 49 ans",
+        "50 ans à 59 ans",
+        "60 ans et plus" .
+
+<http://confinos.fr/686006> :nom_gare "Paris Gare de Lyon" ;
+    :pourcentage 3.4e+00,
+        4.13e+00,
+        1.11e+01,
+        1.57e+01,
+        1.88e+01,
+        2.1e+01,
+        2.59e+01 ;
+    :record_year "2012" ;
+    :tranche_age "19 ans et moins",
+        "20 ans à 29 ans",
+        "30 ans à 39 ans",
+        "40 ans à 49 ans",
+        "50 ans à 59 ans",
+        "60 ans et plus",
+        "Non communiqué" .
+
+<http://confinos.fr/713040> :nom_gare "Dijon" ;
+    :pourcentage 1.03e+01,
+        1.44e+01,
+        1.46e+01,
+        1.56e+01,
+        1.95e+01,
+        2.54e+01 ;
+    :record_year "2015" ;
+    :tranche_age "19 ans et moins",
+        "20 ans à 29 ans",
+        "30 ans à 39 ans",
+        "40 ans à 49 ans",
+        "50 ans à 59 ans",
+        "60 ans et plus" .
+
+<http://confinos.fr/718007> :nom_gare "Besançon-Viotte" ;
+    :pourcentage 1e+02 ;
+    :record_year "2012" ;
+    :tranche_age "Non communiqué" .
+
+<http://confinos.fr/722025> :nom_gare "Lyon Perrache" ;
+    :pourcentage 3.2e-01,
+        1.01e+01,
+        1.1e+01,
+        1.6e+01,
+        1.78e+01,
+        1.82e+01,
+        2.66e+01 ;
+    :record_year "2011" ;
+    :tranche_age "19 ans et moins",
+        "20 ans à 29 ans",
+        "30 ans à 39 ans",
+        "40 ans à 49 ans",
+        "50 ans à 59 ans",
+        "60 ans et plus",
+        "Non communiqué" .
+
+<http://confinos.fr/723197> :nom_gare "Lyon Part Dieu" ;
+    :pourcentage 7.89e+00,
+        1.04e+01,
+        1.37e+01,
+        1.58e+01,
+        1.76e+01,
+        3.46e+01 ;
+    :record_year "2011" ;
+    :tranche_age "19 ans et moins",
+        "20 ans à 29 ans",
+        "30 ans à 39 ans",
+        "40 ans à 49 ans",
+        "50 ans à 59 ans",
+        "60 ans et plus" .
+
+<http://confinos.fr/747006> :nom_gare "Grenoble" ;
+    :pourcentage 1.01e+01,
+        1.29e+01,
+        1.62e+01,
+        1.67e+01,
+        1.72e+01,
+        2.69e+01 ;
+    :record_year "2015" ;
+    :tranche_age "19 ans et moins",
+        "20 ans à 29 ans",
+        "30 ans à 39 ans",
+        "40 ans à 49 ans",
+        "50 ans à 59 ans",
+        "60 ans et plus" .
+
+<http://confinos.fr/751008> :nom_gare "Marseille Saint-Charles" ;
+    :pourcentage 2.4e-01,
+        1.23e+01,
+        1.37e+01,
+        1.53e+01,
+        1.73e+01,
+        2.89e+01 ;
+    :record_year "2013" ;
+    :tranche_age "19 ans et moins",
+        "20 ans à 29 ans",
+        "30 ans à 39 ans",
+        "40 ans à 49 ans",
+        "50 ans à 59 ans",
+        "60 ans et plus",
+        "Non communiqué" .
+
+<http://confinos.fr/753657> :nom_gare "Arles" ;
+    :pourcentage 1.26e+01,
+        1.3e+01,
+        1.32e+01,
+        1.77e+01,
+        1.99e+01,
+        2.35e+01 ;
+    :record_year "2014" ;
+    :tranche_age "19 ans et moins",
+        "20 ans à 29 ans",
+        "30 ans à 39 ans",
+        "40 ans à 49 ans",
+        "50 ans à 59 ans",
+        "60 ans et plus" .
+
+<http://confinos.fr/755009> :nom_gare "Toulon" ;
+    :pourcentage 1.09e+01,
+        1.11e+01,
+        1.4e+01,
+        1.62e+01,
+        1.88e+01,
+        2.9e+01 ;
+    :record_year "2014" ;
+    :tranche_age "19 ans et moins",
+        "20 ans à 29 ans",
+        "30 ans à 39 ans",
+        "40 ans à 49 ans",
+        "50 ans à 59 ans",
+        "60 ans et plus" .
+
+<http://confinos.fr/756056> :nom_gare "Nice" ;
+    :pourcentage 1.37e+01,
+        1.38e+01,
+        1.4e+01,
+        1.44e+01,
+        1.54e+01,
+        2.87e+01 ;
+    :record_year "2014" ;
+    :tranche_age "19 ans et moins",
+        "20 ans à 29 ans",
+        "30 ans à 39 ans",
+        "40 ans à 49 ans",
+        "50 ans à 59 ans",
+        "60 ans et plus" .
+
+<http://confinos.fr/757625> :nom_gare "Cannes" ;
+    :pourcentage 7.73e+00,
+        9.81e+00,
+        1.25e+01,
+        1.91e+01,
+        1.97e+01,
+        3.12e+01 ;
+    :record_year "2015" ;
+    :tranche_age "19 ans et moins",
+        "20 ans à 29 ans",
+        "30 ans à 39 ans",
+        "40 ans à 49 ans",
+        "50 ans à 59 ans",
+        "60 ans et plus" .
+
+<http://confinos.fr/762906> :nom_gare "Lyon Saint Exupery TGV" ;
+    :pourcentage 2.8e+00,
+        1e+01,
+        1.63e+01,
+        2.14e+01,
+        2.15e+01,
+        2.8e+01 ;
+    :record_year "2016" ;
+    :tranche_age "19 ans et moins",
+        "20 ans à 29 ans",
+        "30 ans à 39 ans",
+        "40 ans à 49 ans",
+        "50 ans à 59 ans",
+        "60 ans et plus" .
+
+<http://confinos.fr/763029> :nom_gare "Valence TGV Rhône-Alpes Sud" ;
+    :pourcentage 3.21e+00,
+        1.78e+01,
+        1.94e+01,
+        1.96e+01,
+        1.97e+01,
+        2.03e+01 ;
+    :record_year "2015" ;
+    :tranche_age "19 ans et moins",
+        "20 ans à 29 ans",
+        "30 ans à 39 ans",
+        "40 ans à 49 ans",
+        "50 ans à 59 ans",
+        "60 ans et plus" .
+
+<http://confinos.fr/773002> :nom_gare "Montpellier Saint-Roch" ;
+    :pourcentage 1.3e-01,
+        1.19e+01,
+        1.35e+01,
+        1.46e+01,
+        1.54e+01,
+        2.98e+01 ;
+    :record_year "2015" ;
+    :tranche_age "19 ans et moins",
+        "20 ans à 29 ans",
+        "30 ans à 39 ans",
+        "40 ans à 49 ans",
+        "50 ans à 59 ans",
+        "60 ans et plus",
+        "Non communiqué" .
+
+<http://confinos.fr/775007> :nom_gare "Nîmes" ;
+    :pourcentage 1.12e+01,
+        1.27e+01,
+        1.33e+01,
+        1.64e+01,
+        2.19e+01,
+        2.44e+01 ;
+    :record_year "2014" ;
+    :tranche_age "19 ans et moins",
+        "20 ans à 29 ans",
+        "30 ans à 39 ans",
+        "40 ans à 49 ans",
+        "50 ans à 59 ans",
+        "60 ans et plus" .
+
+<http://confinos.fr/784009> :nom_gare "Perpignan" ;
+    :pourcentage 7.79e+00,
+        1.45e+01,
+        1.49e+01,
+        1.89e+01,
+        2.19e+01,
+        2.2e+01 ;
+    :record_year "2016" ;
+    :tranche_age "19 ans et moins",
+        "20 ans à 29 ans",
+        "30 ans à 39 ans",
+        "40 ans à 49 ans",
+        "50 ans à 59 ans",
+        "60 ans et plus" .
+
+[] :data [ :nom_gare "Paris Bercy" ;
+            :pourcentage 2.38e+01 ;
+            :record_year "2012" ;
+            :tranche_age "40 ans à 49 ans" ],
+        [ :nom_gare "Paris Bercy" ;
+            :pourcentage 1.87e+01 ;
+            :record_year "2012" ;
+            :tranche_age "20 ans à 29 ans" ],
+        [ :nom_gare "Paris Bercy" ;
+            :pourcentage 2.11e+01 ;
+            :record_year "2012" ;
+            :tranche_age "30 ans à 39 ans" ],
+        [ :nom_gare "Paris Bercy" ;
+            :pourcentage 1.76e+01 ;
+            :record_year "2012" ;
+            :tranche_age "50 ans à 59 ans" ],
+        [ :nom_gare "Paris Bercy" ;
+            :pourcentage 1.69e+01 ;
+            :record_year "2012" ;
+            :tranche_age "60 ans et plus" ],
+        [ :nom_gare "Paris Bercy" ;
+            :pourcentage 1.89e+00 ;
+            :record_year "2012" ;
+            :tranche_age "19 ans et moins" ],
+        <http://confinos.fr/111849>,
+        <http://confinos.fr/113001>,
+        <http://confinos.fr/118000>,
+        <http://confinos.fr/141002>,
+        <http://confinos.fr/142109>,
+        <http://confinos.fr/171009>,
+        <http://confinos.fr/182014>,
+        <http://confinos.fr/182063>,
+        <http://confinos.fr/192039>,
+        <http://confinos.fr/212027>,
+        <http://confinos.fr/223263>,
+        <http://confinos.fr/271007>,
+        <http://confinos.fr/271494>,
+        <http://confinos.fr/286005>,
+        <http://confinos.fr/300822>,
+        <http://confinos.fr/300863>,
+        <http://confinos.fr/313874>,
+        <http://confinos.fr/318964>,
+        <http://confinos.fr/319012>,
+        <http://confinos.fr/345025>,
+        <http://confinos.fr/384008>,
+        <http://confinos.fr/391003>,
+        <http://confinos.fr/393702>,
+        <http://confinos.fr/396002>,
+        <http://confinos.fr/411017>,
+        <http://confinos.fr/444000>,
+        <http://confinos.fr/444877>,
+        <http://confinos.fr/471003>,
+        <http://confinos.fr/476002>,
+        <http://confinos.fr/478404>,
+        <http://confinos.fr/481002>,
+        <http://confinos.fr/484006>,
+        <http://confinos.fr/547000>,
+        <http://confinos.fr/571000>,
+        <http://confinos.fr/575001>,
+        <http://confinos.fr/581009>,
+        <http://confinos.fr/583005>,
+        <http://confinos.fr/611004>,
+        <http://confinos.fr/673004>,
+        <http://confinos.fr/673400>,
+        <http://confinos.fr/677005>,
+        <http://confinos.fr/686006>,
+        <http://confinos.fr/713040>,
+        <http://confinos.fr/718007>,
+        <http://confinos.fr/722025>,
+        <http://confinos.fr/723197>,
+        <http://confinos.fr/747006>,
+        <http://confinos.fr/751008>,
+        <http://confinos.fr/753657>,
+        <http://confinos.fr/755009>,
+        <http://confinos.fr/756056>,
+        <http://confinos.fr/757625>,
+        <http://confinos.fr/762906>,
+        <http://confinos.fr/763029>,
+        <http://confinos.fr/773002>,
+        <http://confinos.fr/775007>,
+        <http://confinos.fr/784009> .
+

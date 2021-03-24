@@ -3,6 +3,13 @@
 {% block body %}
     {% include 'navbar.html.twig' %}
 
+    <div class="mt-4 container">
+        <div id="map"></div>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCSqkkYesHNz_pdNWLmvEgvPtMSrIX43Zs&callback=initMap&libraries=&v=weekly" async></script>
+    </div>
+{% endblock %}
 
-
+{% block javascripts %}
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <script src="{{ asset('../js/map.js') }}"></script>
 {% endblock %}
