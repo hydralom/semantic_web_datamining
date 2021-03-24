@@ -893,17 +893,9 @@
         "60 ans et plus" .
 
 [] :data [ :nom_gare "Paris Bercy" ;
-            :pourcentage 2.38e+01 ;
+            :pourcentage 1.89e+00 ;
             :record_year "2012" ;
-            :tranche_age "40 ans à 49 ans" ],
-        [ :nom_gare "Paris Bercy" ;
-            :pourcentage 1.87e+01 ;
-            :record_year "2012" ;
-            :tranche_age "20 ans à 29 ans" ],
-        [ :nom_gare "Paris Bercy" ;
-            :pourcentage 2.11e+01 ;
-            :record_year "2012" ;
-            :tranche_age "30 ans à 39 ans" ],
+            :tranche_age "19 ans et moins" ],
         [ :nom_gare "Paris Bercy" ;
             :pourcentage 1.76e+01 ;
             :record_year "2012" ;
@@ -913,9 +905,17 @@
             :record_year "2012" ;
             :tranche_age "60 ans et plus" ],
         [ :nom_gare "Paris Bercy" ;
-            :pourcentage 1.89e+00 ;
+            :pourcentage 1.87e+01 ;
             :record_year "2012" ;
-            :tranche_age "19 ans et moins" ],
+            :tranche_age "20 ans à 29 ans" ],
+        [ :nom_gare "Paris Bercy" ;
+            :pourcentage 2.11e+01 ;
+            :record_year "2012" ;
+            :tranche_age "30 ans à 39 ans" ],
+        [ :nom_gare "Paris Bercy" ;
+            :pourcentage 2.38e+01 ;
+            :record_year "2012" ;
+            :tranche_age "40 ans à 49 ans" ],
         <http://confinos.fr/111849>,
         <http://confinos.fr/113001>,
         <http://confinos.fr/118000>,
