@@ -15,7 +15,7 @@ class Carte extends AbstractController
 {
 
     /**
-     * @Route("/carte", name="carte_all_in_one")
+     * @Route("/carte", name="carte")
      *
      * @return Response
      */
