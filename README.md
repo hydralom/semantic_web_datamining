@@ -12,7 +12,9 @@ make build
 
 ## Install project
 
-To install project (install composer, migrations, ...) :
+__⚠️ You need `php7.2` (or higher) + `composer`__ : [install tutorial](https://davidperonne.com/installation-de-php-7-et-composer-sur-windows-10-en-mode-natif/)
+
+To install project (install composer) :
 
 ```bash
 make install

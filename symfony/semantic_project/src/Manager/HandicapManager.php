@@ -42,6 +42,17 @@ class HandicapManager
     public function getHandicap($page)
     {
         $offset = $page * 25;
-        return $this->handicapRepository->getHandicap($offset);
+        $results = $this->handicapRepository->getHandicap($offset);
+
+        $tab = [];
+        foreach ($results as $res) {
+            $tmp = [];
+            $tmp["nom_gare"] = $res["nom_gare"]["value"];
+            $tmp["helped_disabled_nb"] = $res["helped_disabled_nb"]["value"];
+            $tmp["simple_support"] = $res["simple_support"]["value"];
+            array_push($tab, $tmp);
+        }
+
+        return $tab;
     }
 }

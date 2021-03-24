@@ -4,12 +4,94 @@
     {% include 'navbar.html.twig' %}
 
     <div class="mt-4 container">
-        <div id="map"></div>
-        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCSqkkYesHNz_pdNWLmvEgvPtMSrIX43Zs&callback=initMap&libraries=&v=weekly" async></script>
-    </div>
-{% endblock %}
+        <div class="row">
+            <div id="mapid"></div>
+            <script src="{{ asset('../js/init_map.js') }}"></script>
+            <script>
+                let grosTas = JSON.parse("{{ grosTas|json_encode }}".replace(/&quot;/g,'"'));
 
-{% block javascripts %}
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
-    <script src="{{ asset('../js/map.js') }}"></script>
+                let allMarkersGT = [];
+                for(let i = 0; i < grosTas.length; i++){
+                    let marker = L.marker([grosTas[i].lat, grosTas[i].lon], {icon: iconeTrain});
+                    // let marker = L.marker([grosTas[i].lat, grosTas[i].lon], {icon: iconeTrain}).addTo(mymap);
+
+                    let popUpString =
+                        "<b>" + grosTas[i].nom_gare + "</b>" +
+                        "<br>" +
+                        "<br>Ville : " + grosTas[i].ville +
+                        "<br>Code postal : " + grosTas[i].cp
+                    ;
+                    if("helped_disabled_nb" in grosTas[i])
+                        popUpString +="<br><br>Handicapés aidés : " + grosTas[i].helped_disabled_nb;
+                    if("wifi" in grosTas[i])
+                        popUpString += "<br><br><i class=\"fas fa-wifi\"></i>" + grosTas[i].wifi;
+
+                    marker.bindPopup(popUpString);
+
+                    allMarkersGT.push(marker);
+                }
+            </script>
+            <script>
+                let wG = JSON.parse("{{ wifiGares|json_encode }}".replace(/&quot;/g,'"'));
+                console.log(wG)
+
+                allMarkersWG = [];
+                for(let i = 0; i < wG.length; i++){
+                    let marker = L.marker([wG[i].lat, wG[i].lon], {icon: iconeWifi});
+                    // let marker = L.marker([wG[i].lat, wG[i].lon], {icon: iconeWifi}).addTo(mymap);
+
+                    let popUpString =
+                        "<b>" + wG[i].nom_gare + "</b>" +
+                        "<br>" +
+                        "<br>Ville : " + wG[i].ville +
+                        "<br>Code postal : " + wG[i].cp
+                    ;
+
+                    marker.bindPopup(popUpString);
+
+                    allMarkersWG.push(marker);
+                }
+            </script>
+            <script src="{{ asset('../js/map.js') }}"></script>
+        </div>
+
+        {#<div class="row">
+            <div class="mt-4 col-12">
+                <table class="table table-striped">
+                    <thead>
+                    <tr>
+                        <th>Nom Gare</th>
+                        <th>Ville</th>
+                        <th>Code postal</th>
+                        <th>Latitude</th>
+                        <th>Longitude</th>
+                        <th>Handicapés aidés</th>
+                        <th>Is there wifi here ?</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% for gT in grosTas %}
+                        <tr>
+                            <td>{{ gT.nom_gare }}</td>
+                            <td>{{ gT.ville }}</td>
+                            <td>{{ gT.cp }}</td>
+                            <td>{{ gT.lat }}</td>
+                            <td>{{ gT.lon }}</td>
+                            <td>
+                            {% if gT.helped_disabled_nb is defined %}
+                                {{ gT.helped_disabled_nb|default("0") }}
+                            {% endif %}
+                            </td>
+                            <td>
+                            {% if gT.helped_disabled_nb is defined %}
+                                {{ gT.wifi|default("on sait pas") }}
+                            {% endif %}
+                            </td>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>#}
+    </div>
 {% endblock %}
