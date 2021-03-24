@@ -10,17 +10,12 @@ https://ressources.data.sncf.com/api/records/1.0/search/
     ?dataset=gares-equipees-du-wifi
     &q=
     &sort=nom_de_la_gare
-    &refine.gare_regionsncf_libelle=
+    &rows=3000
 
-    https://ressources.data.sncf.com/api/records/1.0/search/?dataset=gares-equipees-du-wifi&q=&sort=nom_de_la_gare
+    https://ressources.data.sncf.com/api/records/1.0/search/?dataset=gares-equipees-du-wifi&q=&sort=nom_de_la_gare&rows=3000
 """
 
-regions = ["REGION+DE+PARIS-NORD",
-           "REGION+DE+PARIS-SUD-EST",
-           "REGION+DE+PARIS SAINT-LAZARE",
-           "REGION+DE+PARIS-EST"]
-
-url = "https://ressources.data.sncf.com/api/records/1.0/search/?dataset=gares-equipees-du-wifi&q=&sort=nom_de_la_gare&refine.gare_regionsncf_libelle="
+url = "https://ressources.data.sncf.com/api/records/1.0/search/?dataset=gares-equipees-du-wifi&q=&sort=nom_de_la_gare&rows=3000"
 
 context = {
     "@vocab": "http://confinos.fr/wifi#",
@@ -56,19 +51,19 @@ def createLogger():
 def getAllData():
     data = []
 
-    for region in regions:
-        response = requests.request("GET", url + region)
+    response = requests.request("GET", url)
 
-        logger.info("Call api %s return %s status" % (response.url, response.status_code))
+    logger.info("Call api %s return %s status" % (response.url, response.status_code))
 
-        r_json = response.json()
-        r_json = r_json["records"]
+    r_json = response.json()
+    r_json = r_json["records"]
 
-        for train_station in r_json:
-            temp = train_station["fields"]
-            data.append(temp)
+    for train_station in r_json:
+        temp = train_station["fields"]
+        temp["uic"] = "0087" + temp["uic"]
+        data.append(temp)
 
-        time.sleep(2)
+    time.sleep(2)
 
     return data
 
