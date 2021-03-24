@@ -37,9 +37,11 @@ class Carte extends AbstractController
     public function AllInOne(): Response
     {
         $grosTas = $this->carteManager->getGrosTas();
+        $wifiGares = $this->carteManager->getWifiGares();
 
         return $this->render('carte/all_in_one.html.twig', [
             'grosTas' => $grosTas,
+            'wifiGares' => $wifiGares,
         ]);
     }
 }

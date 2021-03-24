@@ -23,7 +23,7 @@ class CarteRepository
      */
     public function getGrosTas()
     {
-        $query_villes = "
+        $grosTas = "
            SELECT DISTINCT ?sujet ?nom_gare ?ville ?cp ?lon ?lat ?helped_disabled_nb ?wifi
            WHERE {
              ?subject <http://confinos.fr/train_stations#code_postal> ?cp .
@@ -37,7 +37,28 @@ class CarteRepository
              }
            }
         ";
-        $fuseki_response = $this->askFuseki($this->url . urlencode($query_villes));
+        $fuseki_response = $this->askFuseki($this->url . urlencode($grosTas));
+        $villes_raw = json_decode($fuseki_response, true);
+        return $villes_raw["results"]["bindings"];
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getWifiGares()
+    {
+        $gareWifi = "
+           SELECT DISTINCT ?nom_gare ?ville ?cp ?lon ?lat
+           WHERE {
+             ?subject <http://confinos.fr/train_stations#code_postal> ?cp .
+             ?subject <http://confinos.fr/train_stations#commune_name> ?ville .
+             ?subject <http://confinos.fr/train_stations#nom_gare> ?nom_gare .
+             ?subject <http://confinos.fr/train_stations#longitude> ?lon .
+             ?subject <http://confinos.fr/train_stations#latitude> ?lat .
+             ?subject <http://confinos.fr/wifi#wifi_actif> \"Oui\" .
+           }
+        ";
+        $fuseki_response = $this->askFuseki($this->url . urlencode($gareWifi));
         $villes_raw = json_decode($fuseki_response, true);
         return $villes_raw["results"]["bindings"];
     }

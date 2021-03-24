@@ -6,13 +6,14 @@
     <div class="mt-4 container">
         <div class="row">
             <div id="mapid"></div>
-            <script src="{{ asset('../js/map.js') }}"></script>
+            <script src="{{ asset('../js/init_map.js') }}"></script>
             <script>
                 let grosTas = JSON.parse("{{ grosTas|json_encode }}".replace(/&quot;/g,'"'));
-                for(let i = 0; i < grosTas.length; i++){
-                    // console.log(grosTas[i]);
 
-                    let marker = L.marker([grosTas[i].lat, grosTas[i].lon]).addTo(mymap);
+                let allMarkersGT = [];
+                for(let i = 0; i < grosTas.length; i++){
+                    let marker = L.marker([grosTas[i].lat, grosTas[i].lon], {icon: iconeTrain});
+                    // let marker = L.marker([grosTas[i].lat, grosTas[i].lon], {icon: iconeTrain}).addTo(mymap);
 
                     let popUpString =
                         "<b>" + grosTas[i].nom_gare + "</b>" +
@@ -26,8 +27,32 @@
                         popUpString += "<br><br><i class=\"fas fa-wifi\"></i>" + grosTas[i].wifi;
 
                     marker.bindPopup(popUpString);
+
+                    allMarkersGT.push(marker);
                 }
             </script>
+            <script>
+                let wG = JSON.parse("{{ wifiGares|json_encode }}".replace(/&quot;/g,'"'));
+                console.log(wG)
+
+                allMarkersWG = [];
+                for(let i = 0; i < wG.length; i++){
+                    let marker = L.marker([wG[i].lat, wG[i].lon], {icon: iconeWifi});
+                    // let marker = L.marker([wG[i].lat, wG[i].lon], {icon: iconeWifi}).addTo(mymap);
+
+                    let popUpString =
+                        "<b>" + wG[i].nom_gare + "</b>" +
+                        "<br>" +
+                        "<br>Ville : " + wG[i].ville +
+                        "<br>Code postal : " + wG[i].cp
+                    ;
+
+                    marker.bindPopup(popUpString);
+
+                    allMarkersWG.push(marker);
+                }
+            </script>
+            <script src="{{ asset('../js/map.js') }}"></script>
         </div>
 
         {#<div class="row">
